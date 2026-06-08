@@ -9,9 +9,13 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0B1829;overflow-x:hidden;}
-:root{--gold:#FFFF00;--gold2:#FFFF66;--gl:#F5EDD6;--gd:rgba(255,255,0,.15);--mu:#5A6A7E;--li:#F4F6F9;--bo:#DDE3ED;}
+:root{--gold:#FFCC00;--gold2:#FFE033;--gl:#F5EDD6;--gd:rgba(255,255,0,.15);--mu:#5A6A7E;--li:#F4F6F9;--bo:#DDE3ED;}
 a{text-decoration:none;color:inherit;}svg{display:block;flex-shrink:0;}
-#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:68px;background:rgba(0,0,0,.97);backdrop-filter:blur(18px);box-shadow:0 2px 24px rgba(0,0,0,.3);}
+#topbar{background:#fff;position:fixed;top:0;left:0;right:0;z-index:201;height:36px;border-bottom:1px solid #e8e8e8;display:flex;align-items:center;padding:0 6%;}
+.tb-wrap{display:flex;align-items:center;justify-content:flex-end;gap:24px;max-width:1140px;margin:0 auto;width:100%;}
+.tb-item{font-size:11px;color:#444;font-weight:500;display:flex;align-items:center;gap:5px;transition:.2s;}
+.tb-item:hover{color:#000;}
+#nav{position:fixed;top:36px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:68px;background:rgba(0,0,0,.97);backdrop-filter:blur(18px);box-shadow:0 2px 24px rgba(0,0,0,.3);}
 .nlogo{display:flex;align-items:center;gap:10px;}
 .nlogo-ic{width:38px;height:38px;border-radius:10px;background:var(--gd);border:1px solid rgba(201,162,74,.3);display:flex;align-items:center;justify-content:center;}
 .nlogo-t{color:#F4F0E6;font-size:15px;font-weight:800;line-height:1;}
@@ -99,10 +103,21 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6
 </style>
 </head>
 <body>
+<div id="topbar">
+  <div class="tb-wrap">
+    <a href="tel:+5531987299396" class="tb-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (31) 98729-9396
+    </a>
+    <a href="https://instagram.com/santoonofrevigilangia" target="_blank" class="tb-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @santoonofrevigilangia
+    </a>
+  </div>
+</div>
 <nav id="nav">
   <a href="index.html" class="nlogo">
-    <div class="nlogo-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#FFFF00"/></svg></div>
-    <div><div class="nlogo-t">Santo Onofre</div><span class="nlogo-s">SERVIÇOS</span></div>
+    <img src="logosantoonofre.jpeg" alt="Santo Onofre" style="height:46px;width:auto;border-radius:6px;object-fit:contain;">
   </a>
   <div class="nlinks">
     <a href="servicos.html" class="nlink">Serviços</a>
@@ -132,13 +147,13 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6
     <div class="about-grid">
       <div class="about-vis">
         <div class="about-vis-top">
-          <div class="about-vis-logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#FFFF00"/></svg></div>
+          <div class="about-vis-logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#FFCC00"/></svg></div>
           <div><div class="about-vis-name">Santo Onofre Serviços</div><div class="about-vis-tag">SEGURANÇA PATRIMONIAL · BH</div></div>
         </div>
         <div class="checklist">
-          <div class="check"><div class="check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p>Equipe certificada com treinamento técnico contínuo e reciclagem operacional.</p></div>
-          <div class="check"><div class="check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p>Gestão de escala rigorosa garantindo cobertura ininterrupta de todos os postos.</p></div>
-          <div class="check"><div class="check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p>Atendimento personalizado com planos adaptados à realidade de cada cliente.</p></div>
+          <div class="check"><div class="check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p>Equipe certificada com treinamento técnico contínuo e reciclagem operacional.</p></div>
+          <div class="check"><div class="check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p>Gestão de escala rigorosa garantindo cobertura ininterrupta de todos os postos.</p></div>
+          <div class="check"><div class="check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p>Atendimento personalizado com planos adaptados à realidade de cada cliente.</p></div>
         </div>
         <div class="about-badges">
           <div class="about-badge"><div class="about-badge-n">+10</div><div class="about-badge-l">ANOS</div></div>
@@ -153,10 +168,10 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6
         <p class="sec-sub" style="margin-top:16px">A Santo Onofre Serviços nasceu com o propósito de oferecer segurança real — não apenas presença. Atuamos há mais de 10 anos no mercado de segurança patrimonial e controladoria de acesso, atendendo empresas, condomínios e indústrias em Belo Horizonte e região.</p>
         <p class="sec-sub" style="margin-top:12px">Nossa equipe é formada por profissionais certificados, com treinamento técnico contínuo. Acreditamos que segurança é confiança — e confiança se constrói com transparência, profissionalismo e comprometimento diário.</p>
         <div class="about-list">
-          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Vigilantes certificados</strong> — formação técnica com reciclagem semestral.</p></div>
-          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Tecnologia integrada</strong> — CFTV e controle eletrônico de acesso.</p></div>
-          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Contratos flexíveis</strong> — mensais, avulsos e por projeto, sem burocracia.</p></div>
-          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Relatórios e transparência</strong> — comunicação direta com o contratante.</p></div>
+          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Vigilantes certificados</strong> — formação técnica com reciclagem semestral.</p></div>
+          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Tecnologia integrada</strong> — CFTV e controle eletrônico de acesso.</p></div>
+          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Contratos flexíveis</strong> — mensais, avulsos e por projeto, sem burocracia.</p></div>
+          <div class="about-item"><div class="about-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div><p><strong>Relatórios e transparência</strong> — comunicação direta com o contratante.</p></div>
         </div>
         <a href="contato.html" class="btn-gold">Falar com Especialista <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
@@ -173,17 +188,17 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6
     </div>
     <div class="mvv-grid">
       <div class="mvv-card">
-        <div class="mvv-top"><div class="mvv-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="mvv-label">Missão</span></div>
+        <div class="mvv-top"><div class="mvv-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="mvv-label">Missão</span></div>
         <div class="mvv-title">Proteger com responsabilidade</div>
         <p>Prover serviços de segurança patrimonial e controladoria de acesso com profissionalismo, ética e comprometimento, assegurando a proteção de pessoas, bens e patrimônios dos nossos clientes.</p>
       </div>
       <div class="mvv-card">
-        <div class="mvv-top"><div class="mvv-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><span class="mvv-label">Visão</span></div>
+        <div class="mvv-top"><div class="mvv-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><span class="mvv-label">Visão</span></div>
         <div class="mvv-title">Referência em Minas Gerais</div>
         <p>Ser reconhecida como empresa de referência em segurança patrimonial em Minas Gerais, crescendo com base na confiança dos clientes, excelência operacional e inovação contínua.</p>
       </div>
       <div class="mvv-card">
-        <div class="mvv-top"><div class="mvv-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFF00" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><span class="mvv-label">Valores</span></div>
+        <div class="mvv-top"><div class="mvv-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><span class="mvv-label">Valores</span></div>
         <div class="mvv-title">Ética, preparo e compromisso</div>
         <p>Transparência nas relações, comprometimento com a segurança do cliente, rigor no treinamento de equipes, inovação nas soluções e resposta rápida a qualquer incidente.</p>
       </div>
@@ -205,7 +220,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6
 <footer>
   <div class="wrap">
     <div class="footer-grid">
-      <div><div class="ft-brand"><div class="ft-brand-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#FFFF00"/></svg></div><span class="ft-name">Santo Onofre Serviços</span></div><p class="ft-desc">Segurança patrimonial e controladoria de acesso com profissionalismo há mais de 10 anos em Belo Horizonte, MG.</p></div>
+      <div><div class="ft-brand"><div class="ft-brand-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#FFCC00"/></svg></div><span class="ft-name">Santo Onofre Serviços</span></div><p class="ft-desc">Segurança patrimonial e controladoria de acesso com profissionalismo há mais de 10 anos em Belo Horizonte, MG.</p></div>
       <div><div class="ft-title">Serviços</div><a href="servicos.html" class="ft-link">Vigilância Patrimonial</a><a href="servicos.html" class="ft-link">Controladoria de Acesso</a><a href="servicos.html" class="ft-link">Portaria e Recepção</a><a href="servicos.html" class="ft-link">Rondas e Patrulhamento</a></div>
       <div><div class="ft-title">Empresa</div><a href="sobre.html" class="ft-link">Institucional</a><a href="sobre.html" class="ft-link">Missão e Valores</a><a href="contato.html" class="ft-link">Contato</a></div>
       <div><div class="ft-title">Fale Conosco</div><a href="https://wa.me/5531987299396" class="ft-link" target="_blank">(31) 98729-9396</a><a href="mailto:contato@santoonofreservicos.com" class="ft-link">contato@santoonofreservicos.com</a><span class="ft-link" style="cursor:default">Belo Horizonte, MG</span><span class="ft-link" style="cursor:default">Seg–Sex · 08h às 18h</span></div>
