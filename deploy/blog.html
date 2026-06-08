@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Blog da Santo Onofre Serviços — artigos sobre vigilância patrimonial, segurança para eventos, monitoramento eletrônico e controle de acesso em Belo Horizonte, MG."/>
+<title>Blog | Santo Onofre Serviços — Segurança Patrimonial em Belo Horizonte</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0B1829;overflow-x:hidden;}
+:root{--gold:#FFCC00;--gold2:#FFE033;--gd:rgba(255,204,0,.15);--mu:#5A6A7E;--li:#F4F6F9;--bo:#DDE3ED;}
+a{text-decoration:none;color:inherit;}svg{display:block;flex-shrink:0;}
+#topbar{background:#000;position:fixed;top:0;left:0;right:0;z-index:201;height:36px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;padding:0 6%;}
+.tb-wrap{display:flex;align-items:center;justify-content:flex-end;gap:24px;max-width:1140px;margin:0 auto;width:100%;}
+.tb-item{font-size:11px;color:rgba(255,255,255,.7);font-weight:500;display:flex;align-items:center;gap:5px;transition:.2s;}
+.tb-item:hover{color:#fff;}
+#nav{position:fixed;top:36px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:68px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);transition:.3s;}
+.nlogo{display:flex;align-items:center;}
+.nlinks{display:flex;align-items:center;gap:4px;}
+.nlink{color:#333;font-size:12px;font-weight:500;padding:7px 13px;border-radius:7px;transition:.2s;}
+.nlink:hover,.nlink.active{color:#000;background:rgba(0,0,0,.05);}
+.ncta{background:var(--gold);color:#0B1829;font-size:12px;font-weight:800;padding:9px 20px;border-radius:8px;transition:.2s;margin-left:6px;}
+.ncta:hover{background:var(--gold2);}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.ham span{display:block;width:20px;height:2px;background:#000;border-radius:2px;}
+.mob{display:none;position:fixed;top:104px;left:0;right:0;z-index:199;background:rgba(0,0,0,.98);backdrop-filter:blur(18px);padding:12px 6%;border-top:1px solid rgba(255,255,255,.07);}
+.mob.op{display:flex;flex-direction:column;gap:2px;}
+.mob a{color:rgba(255,255,255,.65);font-size:14px;padding:12px;border-radius:9px;display:block;font-weight:500;}
+.mob a:last-child{color:var(--gold2);font-weight:700;}
+.page-hero{background:linear-gradient(135deg,#000,#111);padding:100px 6% 60px;margin-top:104px;}
+.page-hero-wrap{max-width:1140px;margin:0 auto;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.35);margin-bottom:20px;}
+.breadcrumb a{color:rgba(255,255,255,.35);transition:.2s;}.breadcrumb a:hover{color:var(--gold);}
+.page-hero h1{font-size:clamp(28px,4vw,48px);font-weight:900;color:#F4F0E6;margin-bottom:12px;}
+.page-hero h1 em{font-style:normal;color:var(--gold);}
+.page-hero p{font-size:14px;color:rgba(255,255,255,.45);max-width:520px;line-height:1.75;}
+.stag{font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--gold);margin-bottom:8px;display:block;text-transform:uppercase;}
+.gold-line{width:44px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));margin:16px 0 0;}
+.wrap{max-width:1140px;margin:0 auto;}
+.sec{padding:72px 6%;}
+.sec-light{background:var(--li);}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px;}
+.blog-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--bo);transition:.3s;display:flex;flex-direction:column;}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+.blog-card-img{height:200px;background:#111;position:relative;overflow:hidden;}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+.blog-card:hover .blog-card-img img{transform:scale(1.05);}
+.blog-cat{position:absolute;top:14px;left:14px;background:var(--gold);color:#0B1829;font-size:10px;font-weight:800;padding:4px 10px;border-radius:100px;letter-spacing:.5px;text-transform:uppercase;}
+.blog-body{padding:22px;flex:1;display:flex;flex-direction:column;}
+.blog-meta{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--mu);margin-bottom:12px;}
+.blog-meta span{display:flex;align-items:center;gap:4px;}
+.blog-card h2{font-size:16px;font-weight:800;color:#0B1829;line-height:1.4;margin-bottom:10px;}
+.blog-card p{font-size:13px;color:var(--mu);line-height:1.7;flex:1;}
+.blog-read{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:12px;font-weight:700;color:var(--gold);transition:.2s;}
+.blog-read:hover{gap:10px;}
+.blog-card-featured{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;border-radius:16px;overflow:hidden;border:1px solid var(--bo);background:#fff;transition:.3s;}
+.blog-card-featured:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+.blog-feat-img{position:relative;overflow:hidden;min-height:320px;}
+.blog-feat-img img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+.blog-card-featured:hover .blog-feat-img img{transform:scale(1.04);}
+.blog-feat-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;}
+.blog-feat-tag{background:var(--gold);color:#0B1829;font-size:10px;font-weight:800;padding:4px 12px;border-radius:100px;width:fit-content;margin-bottom:16px;text-transform:uppercase;}
+.blog-feat-body h2{font-size:clamp(20px,2.2vw,28px);font-weight:900;color:#0B1829;line-height:1.3;margin-bottom:12px;}
+.blog-feat-body p{font-size:14px;color:var(--mu);line-height:1.75;margin-bottom:24px;}
+.btn-gold{background:var(--gold);color:#0B1829;font-size:13px;font-weight:800;padding:13px 26px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;transition:.2s;width:fit-content;}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-1px);}
+footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6% 24px;}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;}
+.ft-brand{display:flex;align-items:center;gap:9px;margin-bottom:12px;}
+.ft-brand-ic{width:32px;height:32px;border-radius:8px;background:var(--gd);display:flex;align-items:center;justify-content:center;}
+.ft-name{color:#F4F0E6;font-size:13px;font-weight:800;}
+.ft-desc{color:rgba(255,255,255,.22);font-size:12px;line-height:1.7;max-width:230px;}
+.ft-title{color:rgba(255,255,255,.35);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.ft-link{display:block;color:rgba(255,255,255,.26);font-size:12px;margin-bottom:8px;transition:.2s;}
+.ft-link:hover{color:var(--gold2);}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.ft-copy{color:rgba(255,255,255,.16);font-size:11px;}
+.wa{position:fixed;bottom:24px;right:24px;z-index:300;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:.25s;}
+.wa:hover{transform:scale(1.08);}
+@media(max-width:960px){.nlinks{display:none;}.ham{display:flex;}.blog-grid{grid-template-columns:1fr 1fr;}.blog-card-featured{grid-template-columns:1fr;}.blog-feat-img{min-height:220px;}.footer-grid{grid-template-columns:1fr 1fr;gap:24px;}}
+@media(max-width:560px){.blog-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div class="tb-wrap">
+    <a href="tel:+5531987299396" class="tb-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Contrate: (31) 98729-9396
+    </a>
+    <a href="https://instagram.com/santoonofrevigilangia" target="_blank" class="tb-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @santoonofrevigilangia
+    </a>
+  </div>
+</div>
+<nav id="nav">
+  <a href="index.html" class="nlogo">
+    <img src="navbaronofre.jpg" alt="Santo Onofre" style="height:52px;width:auto;object-fit:contain;">
+  </a>
+  <div class="nlinks">
+    <a href="servicos.html" class="nlink">Serviços</a>
+    <a href="sobre.html" class="nlink">Institucional</a>
+    <a href="blog.html" class="nlink active">Blog</a>
+    <a href="contato.html" class="nlink">Contato</a>
+    <a href="contato.html" class="ncta">Falar com Especialista</a>
+  </div>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="servicos.html" onclick="cm()">Serviços</a>
+  <a href="sobre.html" onclick="cm()">Institucional</a>
+  <a href="blog.html" onclick="cm()">Blog</a>
+  <a href="contato.html" onclick="cm()">Contato</a>
+  <a href="contato.html" onclick="cm()">Falar com Especialista →</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-wrap">
+    <div class="breadcrumb"><a href="index.html">Início</a><span>›</span><span style="color:rgba(255,255,255,.5)">Blog</span></div>
+    <h1>Blog de <em>Segurança Patrimonial</em></h1>
+    <p>Artigos, dicas e informações sobre vigilância, monitoramento eletrônico, controle de acesso e segurança para empresas em Belo Horizonte.</p>
+  </div>
+</div>
+
+<div class="sec sec-light">
+  <div class="wrap">
+    <span class="stag">Artigos Recentes</span>
+    <h2 style="font-size:clamp(22px,3vw,32px);font-weight:900;color:#0B1829;line-height:1.2;margin-bottom:8px;">Conteúdo Especializado em Segurança</h2>
+    <div class="gold-line"></div>
+
+    <div class="blog-grid">
+
+      <!-- DESTAQUE -->
+      <a href="blog-vigilancia-patrimonial.html" class="blog-card-featured">
+        <div class="blog-feat-img">
+          <img src="img-vigia.jpg" alt="Vigilância Patrimonial em Belo Horizonte">
+        </div>
+        <div class="blog-feat-body">
+          <div class="blog-feat-tag">Em Destaque</div>
+          <h2>O que é Vigilância Patrimonial e por que sua Empresa em BH Precisa</h2>
+          <p>Entenda como funciona o serviço de vigilância patrimonial, quais os benefícios para empresas, condomínios e indústrias, e como contratar a empresa certa em Belo Horizonte.</p>
+          <span class="btn-gold">Ler artigo completo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- CARD 1 -->
+      <a href="blog-seguranca-eventos.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="img-orientador.jpg" alt="Segurança para eventos em BH">
+          <span class="blog-cat">Eventos</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6 min de leitura</span>
+          </div>
+          <h2>Segurança em Eventos: Como Garantir Proteção Total em Formaturas, Shows e Eventos Corporativos</h2>
+          <p>Saiba como planejar a segurança do seu evento com equipes treinadas, orientadores de público e controle de acesso eficiente.</p>
+          <span class="blog-read">Ler artigo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- CARD 2 -->
+      <a href="blog-monitoramento-eletronico.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="img-monitoramento.jpg" alt="Monitoramento eletrônico CFTV">
+          <span class="blog-cat">Tecnologia</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 min de leitura</span>
+          </div>
+          <h2>Monitoramento Eletrônico 24h: CFTV e Câmeras de Segurança para Empresas e Condomínios</h2>
+          <p>Descubra como o monitoramento eletrônico com câmeras CFTV protege seu patrimônio dia e noite com custo-benefício real.</p>
+          <span class="blog-read">Ler artigo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- CARD 3 -->
+      <a href="blog-controle-acesso.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="img-controle-acesso.jpg" alt="Controle de acesso empresas">
+          <span class="blog-cat">Acesso</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 min de leitura</span>
+          </div>
+          <h2>Controle de Acesso para Condomínios e Empresas: Tudo que Você Precisa Saber</h2>
+          <p>Catracas eletrônicas, biometria, cartões e portaria profissional: conheça as melhores soluções de controle de acesso.</p>
+          <span class="blog-read">Ler artigo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- CARD 4 -->
+      <a href="blog-rondas-ostensivas.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="img-rondas.jpg" alt="Rondas ostensivas segurança">
+          <span class="blog-cat">Prevenção</span>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 min de leitura</span>
+          </div>
+          <h2>Rondas Ostensivas: Como o Patrulhamento Preventivo Reduz Crimes em Empresas</h2>
+          <p>Entenda por que rondas ostensivas são essenciais para dissuadir invasões, furtos e vandalismos no seu patrimônio.</p>
+          <span class="blog-read">Ler artigo <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="ft-brand"><div class="ft-brand-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#FFCC00"/></svg></div><span class="ft-name">Santo Onofre Serviços</span></div><p class="ft-desc">Segurança patrimonial e controladoria de acesso com profissionalismo há mais de 10 anos em Belo Horizonte, MG.</p></div>
+      <div><div class="ft-title">Serviços</div><a href="servicos.html" class="ft-link">Vigilância Patrimonial</a><a href="servicos.html" class="ft-link">Controladoria de Acesso</a><a href="servicos.html" class="ft-link">Segurança em Eventos</a><a href="servicos.html" class="ft-link">Monitoramento Eletrônico</a></div>
+      <div><div class="ft-title">Blog</div><a href="blog-vigilancia-patrimonial.html" class="ft-link">Vigilância Patrimonial</a><a href="blog-seguranca-eventos.html" class="ft-link">Segurança em Eventos</a><a href="blog-monitoramento-eletronico.html" class="ft-link">Monitoramento Eletrônico</a><a href="blog-controle-acesso.html" class="ft-link">Controle de Acesso</a></div>
+      <div><div class="ft-title">Fale Conosco</div><a href="https://wa.me/5531987299396" class="ft-link" target="_blank">(31) 98729-9396</a><a href="mailto:contato@santoonofreservicos.com" class="ft-link">contato@santoonofreservicos.com</a><span class="ft-link" style="cursor:default">Belo Horizonte, MG</span></div>
+    </div>
+    <div class="ft-bottom"><span class="ft-copy">© 2026 Santo Onofre Serviços · Todos os direitos reservados</span></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5531987299396" class="wa" target="_blank" rel="noopener"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script>
+document.getElementById('ham').addEventListener('click',()=>document.getElementById('mob').classList.toggle('op'));
+function cm(){document.getElementById('mob').classList.remove('op');}
+</script>
+</body>
+</html>
