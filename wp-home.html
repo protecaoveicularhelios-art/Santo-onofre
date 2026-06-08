@@ -1,0 +1,201 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--gold:#C9A24A;--gold2:#E8C97A;--gl:#F5EDD6;--gd:rgba(201,162,74,.15);--mu:#5A6A7E;--li:#F4F6F9;--bo:#DDE3ED;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0B1829;}
+a{text-decoration:none;color:inherit;}svg{display:block;flex-shrink:0;}
+.so-sec{padding:72px 5%;}
+.so-wrap{max-width:1140px;margin:0 auto;}
+.so-stag{font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--gold);margin-bottom:8px;display:block;text-transform:uppercase;}
+.so-h2{font-size:clamp(22px,3vw,34px);font-weight:900;color:#0B1829;line-height:1.2;margin-bottom:12px;}
+.so-sub{font-size:14px;color:var(--mu);line-height:1.75;max-width:520px;}
+.so-line{width:44px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));margin:16px auto 0;}
+.so-light{background:var(--li);}
+.so-dark{background:#000;}
+.so-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#0B1829;font-size:13px;font-weight:800;padding:13px 28px;border-radius:10px;text-decoration:none;transition:.2s;}
+.so-btn:hover{background:var(--gold2);}
+.so-btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#0B1829;font-size:13px;font-weight:700;padding:13px 24px;border-radius:10px;border:1.5px solid var(--bo);text-decoration:none;transition:.2s;}
+.so-btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+
+/* STATS */
+.so-stats{background:#000;padding:40px 5%;}
+.so-stats-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.so-stat{text-align:center;padding:20px;}
+.so-stat-n{font-size:36px;font-weight:900;color:#fff;}
+.so-stat-n span{color:var(--gold);}
+.so-stat-l{font-size:10px;color:rgba(255,255,255,.35);margin-top:4px;letter-spacing:1px;text-transform:uppercase;}
+
+/* SERVIÇOS DESTAQUE */
+.so-srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;}
+.so-srv-card{background:#fff;border-radius:14px;padding:24px 20px;border:1px solid var(--bo);transition:.3s;position:relative;overflow:hidden;}
+.so-srv-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:.3s;}
+.so-srv-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,.09);}
+.so-srv-card:hover::after{transform:scaleX(1);}
+.so-srv-icon{width:48px;height:48px;border-radius:13px;background:var(--gl);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.so-srv-card h3{font-size:14px;font-weight:800;color:#0B1829;margin-bottom:7px;}
+.so-srv-card p{font-size:12px;color:var(--mu);line-height:1.65;}
+
+/* SOBRE */
+.so-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.so-about-vis{background:linear-gradient(135deg,#000,#111);border-radius:20px;padding:40px 28px;}
+.so-about-top{display:flex;align-items:center;gap:12px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.07);}
+.so-about-logo{width:44px;height:44px;border-radius:12px;background:var(--gd);border:1px solid rgba(201,162,74,.25);display:flex;align-items:center;justify-content:center;}
+.so-about-name{color:#F4F0E6;font-size:14px;font-weight:800;}
+.so-about-tag{color:rgba(255,255,255,.3);font-size:9px;letter-spacing:1.5px;}
+.so-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px;}
+.so-badge{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 8px;text-align:center;}
+.so-badge-n{font-size:22px;font-weight:900;color:var(--gold);}
+.so-badge-l{font-size:9px;color:rgba(255,255,255,.3);margin-top:2px;letter-spacing:.5px;}
+.so-about-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+.so-item{display:flex;align-items:flex-start;gap:10px;}
+.so-ck{width:20px;height:20px;border-radius:5px;background:var(--gl);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.so-item p{font-size:13px;color:var(--mu);line-height:1.55;}
+.so-item strong{color:#0B1829;}
+
+/* CTA */
+.so-cta{background:linear-gradient(135deg,#000,#111);padding:72px 5%;text-align:center;}
+.so-cta h2{font-size:clamp(22px,3vw,34px);font-weight:900;color:#F4F0E6;margin-bottom:12px;}
+.so-cta p{font-size:15px;color:rgba(255,255,255,.45);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;}
+.so-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.so-btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#0B1829;font-size:13px;font-weight:800;padding:14px 28px;border-radius:10px;text-decoration:none;transition:.2s;}
+.so-btn-gold:hover{background:var(--gold2);}
+.so-btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.7);font-size:13px;font-weight:600;padding:14px 24px;border-radius:10px;border:1px solid rgba(255,255,255,.15);text-decoration:none;transition:.2s;}
+.so-btn-outline:hover{border-color:var(--gold);color:var(--gold2);}
+
+@media(max-width:960px){
+  .so-stats-grid{grid-template-columns:repeat(2,1fr);}
+  .so-srv-grid{grid-template-columns:1fr;}
+  .so-about-grid{grid-template-columns:1fr;}
+}
+</style>
+
+<!-- STATS -->
+<div class="so-stats">
+  <div class="so-stats-grid">
+    <div class="so-stat">
+      <div class="so-stat-n">+<span>10</span></div>
+      <div class="so-stat-l">Anos de mercado</div>
+    </div>
+    <div class="so-stat">
+      <div class="so-stat-n"><span>11</span></div>
+      <div class="so-stat-l">Profissionais</div>
+    </div>
+    <div class="so-stat">
+      <div class="so-stat-n"><span>24</span><small style="font-size:16px;color:rgba(255,255,255,.3)">/7</small></div>
+      <div class="so-stat-l">Monitoramento</div>
+    </div>
+    <div class="so-stat">
+      <div class="so-stat-n"><span>100</span>%</div>
+      <div class="so-stat-l">Comprometimento</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVIÇOS DESTAQUE -->
+<div class="so-sec so-light">
+  <div class="so-wrap">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="so-stag">O que fazemos</span>
+      <h2 class="so-h2">Soluções Completas em Segurança</h2>
+      <p class="so-sub" style="margin:10px auto 0">Proteção profissional para empresas, condomínios e indústrias em Belo Horizonte e região.</p>
+      <div class="so-line"></div>
+    </div>
+    <div class="so-srv-grid">
+      <div class="so-srv-card">
+        <div class="so-srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Vigilância Patrimonial</h3>
+        <p>Proteção ostensiva com vigilantes treinados para empresas, indústrias e condomínios. Cobertura 24 horas.</p>
+      </div>
+      <div class="so-srv-card">
+        <div class="so-srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <h3>Controladoria de Acesso</h3>
+        <p>Gestão eletrônica e presencial de entrada e saída de pessoas e veículos com rastreabilidade total.</p>
+      </div>
+      <div class="so-srv-card">
+        <div class="so-srv-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>Portaria e Recepção</h3>
+        <p>Profissionais qualificados para triagem, identificação e atendimento ao público em condomínios e empresas.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="/servicos" class="so-btn">
+        Ver todos os serviços
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<div class="so-sec">
+  <div class="so-wrap">
+    <div class="so-about-grid">
+      <div class="so-about-vis">
+        <div class="so-about-top">
+          <div class="so-about-logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#C9A24A"/></svg>
+          </div>
+          <div>
+            <div class="so-about-name">Santo Onofre Serviços</div>
+            <div class="so-about-tag">SEGURANÇA PATRIMONIAL · BH</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.7;">Atuamos há mais de uma década protegendo empresas, condomínios e indústrias em Belo Horizonte com profissionalismo, ética e comprometimento.</p>
+        <div class="so-badges">
+          <div class="so-badge"><div class="so-badge-n">+10</div><div class="so-badge-l">ANOS</div></div>
+          <div class="so-badge"><div class="so-badge-n">11</div><div class="so-badge-l">PROFISSIONAIS</div></div>
+          <div class="so-badge"><div class="so-badge-n">24h</div><div class="so-badge-l">SUPORTE</div></div>
+        </div>
+      </div>
+      <div>
+        <span class="so-stag">Quem somos</span>
+        <h2 class="so-h2">Segurança real com responsabilidade e profissionalismo</h2>
+        <div class="so-line" style="margin-left:0"></div>
+        <div class="so-about-list" style="margin-top:20px;">
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Vigilantes certificados</strong> — formação técnica com reciclagem semestral.</p>
+          </div>
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Tecnologia integrada</strong> — CFTV e controle eletrônico de acesso.</p>
+          </div>
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Contratos flexíveis</strong> — mensais, avulsos e por projeto.</p>
+          </div>
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Relatórios periódicos</strong> — transparência e comunicação direta.</p>
+          </div>
+        </div>
+        <a href="/sobre" class="so-btn">
+          Conhecer nossa história
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="so-cta">
+  <div class="so-wrap">
+    <h2>Pronto para proteger seu patrimônio?</h2>
+    <p>Entre em contato com nossa equipe e receba uma proposta personalizada em até 24 horas.</p>
+    <div class="so-cta-btns">
+      <a href="/contato" class="so-btn-gold">
+        Solicitar Proposta
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/5531987299396" class="so-btn-outline" target="_blank">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</div>

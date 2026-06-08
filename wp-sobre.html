@@ -1,0 +1,156 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--gold:#C9A24A;--gold2:#E8C97A;--gl:#F5EDD6;--gd:rgba(201,162,74,.15);--mu:#5A6A7E;--li:#F4F6F9;--bo:#DDE3ED;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0B1829;}
+a{text-decoration:none;color:inherit;}svg{display:block;flex-shrink:0;}
+.so-sec{padding:72px 5%;}
+.so-wrap{max-width:1140px;margin:0 auto;}
+.so-stag{font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--gold);margin-bottom:8px;display:block;text-transform:uppercase;}
+.so-sec h2{font-size:clamp(22px,3vw,34px);font-weight:900;color:#0B1829;line-height:1.2;margin-bottom:12px;}
+.so-sub{font-size:14px;color:var(--mu);line-height:1.75;max-width:520px;}
+.so-line{width:44px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));margin:16px 0 0;}
+.so-light{background:var(--li);}
+/* About */
+.so-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.so-about-vis{background:linear-gradient(135deg,#000,#111);border-radius:20px;padding:40px 28px;box-shadow:0 24px 64px rgba(11,24,41,.18);}
+.so-about-top{display:flex;align-items:center;gap:12px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.07);}
+.so-about-logo{width:44px;height:44px;border-radius:12px;background:var(--gd);border:1px solid rgba(201,162,74,.25);display:flex;align-items:center;justify-content:center;}
+.so-about-name{color:#F4F0E6;font-size:14px;font-weight:800;}
+.so-about-tag{color:rgba(255,255,255,.3);font-size:9px;letter-spacing:1.5px;}
+.so-checklist{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
+.so-check{display:flex;align-items:flex-start;gap:10px;}
+.so-check-ic{width:20px;height:20px;border-radius:5px;background:var(--gd);border:1px solid rgba(201,162,74,.2);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.so-check p{font-size:12px;color:rgba(255,255,255,.45);line-height:1.55;}
+.so-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.so-badge{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:12px 8px;text-align:center;}
+.so-badge-n{font-size:20px;font-weight:900;color:var(--gold);}
+.so-badge-l{font-size:9px;color:rgba(255,255,255,.3);margin-top:2px;letter-spacing:.5px;}
+.so-about-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+.so-item{display:flex;align-items:flex-start;gap:10px;}
+.so-ck{width:20px;height:20px;border-radius:5px;background:var(--gl);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.so-item p{font-size:13px;color:var(--mu);line-height:1.55;}
+.so-item strong{color:#0B1829;}
+.so-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#0B1829;font-size:13px;font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;transition:.2s;margin-top:24px;}
+.so-btn:hover{background:var(--gold2);}
+/* MVV */
+.so-mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;}
+.so-mvv-card{background:#fff;border-radius:16px;padding:28px 24px;border:1px solid var(--bo);}
+.so-mvv-top{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.so-mvv-ic{width:42px;height:42px;border-radius:11px;background:var(--gl);display:flex;align-items:center;justify-content:center;}
+.so-mvv-label{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;}
+.so-mvv-title{font-size:16px;font-weight:900;color:#0B1829;margin-bottom:8px;}
+.so-mvv-card p{font-size:13px;color:var(--mu);line-height:1.65;}
+@media(max-width:960px){
+  .so-about-grid{grid-template-columns:1fr;}
+  .so-mvv-grid{grid-template-columns:1fr;}
+}
+</style>
+
+<!-- SOBRE -->
+<div class="so-sec">
+  <div class="so-wrap">
+    <div class="so-about-grid">
+      <div class="so-about-vis">
+        <div class="so-about-top">
+          <div class="so-about-logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 6v6c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V6L12 2z" fill="#C9A24A"/></svg>
+          </div>
+          <div>
+            <div class="so-about-name">Santo Onofre Serviços</div>
+            <div class="so-about-tag">SEGURANÇA PATRIMONIAL · BH</div>
+          </div>
+        </div>
+        <div class="so-checklist">
+          <div class="so-check">
+            <div class="so-check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p>Equipe certificada com treinamento técnico contínuo e reciclagem operacional.</p>
+          </div>
+          <div class="so-check">
+            <div class="so-check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p>Gestão de escala rigorosa garantindo cobertura ininterrupta de todos os postos.</p>
+          </div>
+          <div class="so-check">
+            <div class="so-check-ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p>Atendimento personalizado com planos adaptados à realidade de cada cliente.</p>
+          </div>
+        </div>
+        <div class="so-badges">
+          <div class="so-badge"><div class="so-badge-n">+10</div><div class="so-badge-l">ANOS</div></div>
+          <div class="so-badge"><div class="so-badge-n">11</div><div class="so-badge-l">PROFISSIONAIS</div></div>
+          <div class="so-badge"><div class="so-badge-n">24h</div><div class="so-badge-l">SUPORTE</div></div>
+        </div>
+      </div>
+      <div>
+        <span class="so-stag">Institucional</span>
+        <h2>Excelência em Segurança Patrimonial e Controladoria</h2>
+        <div class="so-line"></div>
+        <p class="so-sub" style="margin-top:16px">A Santo Onofre Serviços atua há mais de uma década oferecendo segurança real com responsabilidade e profissionalismo. Somos especialistas em vigilância patrimonial e controladoria de acesso para empresas, condomínios e indústrias em Belo Horizonte e Minas Gerais.</p>
+        <div class="so-about-list">
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Vigilantes treinados e certificados</strong> — formação técnica com reciclagem semestral.</p>
+          </div>
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Tecnologia integrada</strong> — sistemas de CFTV e controle eletrônico de acesso.</p>
+          </div>
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Relatórios e transparência</strong> — gestão aberta com comunicação direta ao contratante.</p>
+          </div>
+          <div class="so-item">
+            <div class="so-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <p><strong>Contratos flexíveis</strong> — mensais, avulsos e por projeto, sem burocracia.</p>
+          </div>
+        </div>
+        <a href="/contato" class="so-btn">
+          Falar com Especialista
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSÃO VISÃO VALORES -->
+<div class="so-sec so-light">
+  <div class="so-wrap">
+    <div style="text-align:center;margin-bottom:0;">
+      <span class="so-stag">Nossa Cultura</span>
+      <h2>Missão, Visão e Valores</h2>
+      <div class="so-line" style="margin:16px auto 0;"></div>
+    </div>
+    <div class="so-mvv-grid">
+      <div class="so-mvv-card">
+        <div class="so-mvv-top">
+          <div class="so-mvv-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="so-mvv-label">Missão</span>
+        </div>
+        <div class="so-mvv-title">Proteger com responsabilidade</div>
+        <p>Prover serviços de segurança patrimonial e controladoria de acesso com profissionalismo, ética e comprometimento, assegurando a proteção de pessoas, bens e patrimônios dos nossos clientes.</p>
+      </div>
+      <div class="so-mvv-card">
+        <div class="so-mvv-top">
+          <div class="so-mvv-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <span class="so-mvv-label">Visão</span>
+        </div>
+        <div class="so-mvv-title">Referência em Minas Gerais</div>
+        <p>Ser reconhecida como empresa de referência em segurança patrimonial em Minas Gerais, crescendo com base na confiança dos clientes, excelência operacional e inovação contínua.</p>
+      </div>
+      <div class="so-mvv-card">
+        <div class="so-mvv-top">
+          <div class="so-mvv-ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="so-mvv-label">Valores</span>
+        </div>
+        <div class="so-mvv-title">Ética, preparo e compromisso</div>
+        <p>Transparência nas relações, comprometimento com a segurança do cliente, rigor no treinamento de equipes, inovação nas soluções e resposta rápida a qualquer incidente.</p>
+      </div>
+    </div>
+  </div>
+</div>

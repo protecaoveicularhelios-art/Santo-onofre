@@ -1,0 +1,174 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--gold:#C9A24A;--gold2:#E8C97A;--gl:#F5EDD6;--gd:rgba(201,162,74,.15);--mu:#5A6A7E;--li:#F4F6F9;--bo:#DDE3ED;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0B1829;}
+a{text-decoration:none;color:inherit;}svg{display:block;flex-shrink:0;}
+.so-sec{padding:72px 5%;}
+.so-wrap{max-width:1140px;margin:0 auto;}
+.so-stag{font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--gold);margin-bottom:8px;display:block;text-transform:uppercase;}
+.so-sec h2{font-size:clamp(22px,3vw,34px);font-weight:900;color:#0B1829;line-height:1.2;margin-bottom:12px;}
+.so-sub{font-size:14px;color:var(--mu);line-height:1.75;max-width:520px;}
+.so-line{width:44px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));margin:16px auto 0;}
+.so-header{margin-bottom:48px;text-align:center;}
+.so-header .so-sub{margin:0 auto;}
+.so-light{background:var(--li);}
+.so-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.so-card{background:#fff;border-radius:14px;padding:24px 20px;border:1px solid var(--bo);transition:.3s;position:relative;overflow:hidden;}
+.so-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:.3s;}
+.so-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,.09);}
+.so-card:hover::after{transform:scaleX(1);}
+.so-icon{width:48px;height:48px;border-radius:13px;background:var(--gl);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:.2s;}
+.so-card:hover .so-icon{background:var(--gd);}
+.so-card h3{font-size:13px;font-weight:800;color:#0B1829;margin-bottom:7px;}
+.so-card p{font-size:12px;color:var(--mu);line-height:1.65;}
+.so-dark{background:#000;}
+.so-dark h2{color:#F4F0E6;}
+.so-dark .so-sub{color:rgba(255,255,255,.4);}
+.so-dark .so-stag{color:var(--gold2);}
+.so-set-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.so-set-card{background:rgba(255,255,255,.03);border-radius:14px;padding:28px 20px;border:1px solid rgba(255,255,255,.07);transition:.3s;text-align:center;}
+.so-set-card:hover{background:rgba(201,162,74,.08);border-color:rgba(201,162,74,.2);transform:translateY(-2px);}
+.so-set-ic{width:52px;height:52px;border-radius:14px;background:var(--gd);border:1px solid rgba(201,162,74,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.so-set-card h3{font-size:13px;font-weight:700;color:#F4F0E6;margin-bottom:7px;}
+.so-set-card p{font-size:12px;color:rgba(255,255,255,.32);line-height:1.6;}
+.so-cta{background:linear-gradient(135deg,#000,#111);padding:60px 5%;text-align:center;}
+.so-cta h2{font-size:clamp(20px,2.5vw,30px);font-weight:900;color:#F4F0E6;margin-bottom:12px;}
+.so-cta p{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:28px;}
+.so-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#0B1829;font-size:13px;font-weight:800;padding:13px 28px;border-radius:10px;text-decoration:none;transition:.2s;}
+.so-btn:hover{background:var(--gold2);}
+@media(max-width:960px){.so-grid{grid-template-columns:repeat(2,1fr);}.so-set-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.so-grid{grid-template-columns:1fr;}.so-set-grid{grid-template-columns:1fr 1fr;}}
+</style>
+
+<!-- SERVIÇOS -->
+<div class="so-sec so-light">
+  <div class="so-wrap">
+    <div class="so-header">
+      <span class="so-stag">Serviços</span>
+      <h2>Soluções Completas em Segurança</h2>
+      <p class="so-sub">Proteção profissional para cada tipo de operação em Belo Horizonte e região.</p>
+      <div class="so-line"></div>
+    </div>
+    <div class="so-grid">
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Vigilância Patrimonial</h3>
+        <p>Proteção ostensiva de estabelecimentos comerciais, industriais e residenciais com vigilantes treinados e equipados 24 horas.</p>
+      </div>
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <h3>Controladoria de Acesso</h3>
+        <p>Gestão eletrônica e presencial de entrada e saída de pessoas e veículos com registros e rastreabilidade total.</p>
+      </div>
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>Portaria e Recepção</h3>
+        <p>Profissionais qualificados para triagem, identificação e atendimento ao público em condomínios e empresas.</p>
+      </div>
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Rondas e Patrulhamento</h3>
+        <p>Rondas ostensivas e preventivas em horários programados ou aleatórios para máxima dissuasão de ocorrências.</p>
+      </div>
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Segurança em Eventos</h3>
+        <p>Equipes especializadas para eventos corporativos, formaturas e ocasiões que exigem controle estratégico de acesso.</p>
+      </div>
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg>
+        </div>
+        <h3>Consultoria em Segurança</h3>
+        <p>Análise de vulnerabilidades, mapeamento de riscos e elaboração de planos de segurança personalizados.</p>
+      </div>
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Monitoramento Eletrônico</h3>
+        <p>Câmeras CFTV e sistemas de alarme integrados ao serviço de vigilância presencial para cobertura completa.</p>
+      </div>
+
+      <div class="so-card">
+        <div class="so-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Segurança Avulsa</h3>
+        <p>Cobertura pontual e imediata para demandas emergenciais sem necessidade de contrato de longa duração.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SETORES -->
+<div class="so-sec so-dark">
+  <div class="so-wrap">
+    <div class="so-header">
+      <span class="so-stag">Setores Atendidos</span>
+      <h2>Especialistas nos Principais Segmentos</h2>
+      <p class="so-sub">Conhecemos os desafios de cada setor e oferecemos proteção sob medida.</p>
+      <div class="so-line"></div>
+    </div>
+    <div class="so-set-grid">
+      <div class="so-set-card">
+        <div class="so-set-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Empresas e Comércios</h3>
+        <p>Proteção de ativos, controle de funcionários e prevenção de perdas para negócios de todos os portes.</p>
+      </div>
+      <div class="so-set-card">
+        <div class="so-set-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.7"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3>Condomínios Residenciais</h3>
+        <p>Portaria, controladoria de acesso e rondas para garantir a segurança dos moradores.</p>
+      </div>
+      <div class="so-set-card">
+        <div class="so-set-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.7"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        </div>
+        <h3>Indústrias e Galpões</h3>
+        <p>Vigilância de perímetro, controle de cargas e segurança de turnos para ambientes industriais.</p>
+      </div>
+      <div class="so-set-card">
+        <div class="so-set-ic">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A24A" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Eventos e Locais Públicos</h3>
+        <p>Cobertura de segurança estratégica para eventos de grande e pequeno porte.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="so-cta">
+  <div class="so-wrap">
+    <h2>Precisa de Segurança para seu Negócio?</h2>
+    <p>Entre em contato e receba uma proposta personalizada em até 24 horas.</p>
+    <a href="/contato" class="so-btn">
+      Solicitar Proposta
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
