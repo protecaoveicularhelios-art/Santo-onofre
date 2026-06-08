@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas principais -->
+  <url><loc>https://santoonofrevigilancia.com.br/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/servicos.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/sobre.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/contato.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://santoonofrevigilancia.com.br/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/blog-vigilancia-patrimonial.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/blog-seguranca-eventos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/blog-monitoramento-eletronico.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/blog-controle-acesso.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/blog-rondas-ostensivas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- LPs Cidades MG -->
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-belo-horizonte.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-uberlandia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-contagem.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-juiz-de-fora.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-betim.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-montes-claros.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-ribeirao-das-neves.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-uberaba.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-governador-valadares.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-ipatinga.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-sete-lagoas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-divinopolis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-santa-luzia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-ibirite.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-pocos-de-caldas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-patos-de-minas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-pouso-alegre.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-teofilo-otoni.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-barbacena.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-sabara.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-varginha.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-conselheiro-lafaiete.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-vicosa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-itabira.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-itauna.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-coronel-fabriciano.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-muriae.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-araguari.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-uba.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://santoonofrevigilancia.com.br/seguranca-lavras.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>
