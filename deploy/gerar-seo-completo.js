@@ -619,6 +619,28 @@ ${cid.bairros.split(', ').map(b => `<span class="bairro-tag">${b}</span>`).join(
 </div>
 </section>
 
+<section style="padding:48px 6%;background:#fff;border-top:1px solid var(--bo);">
+<div class="wrap">
+<span class="stag">Você procurou e nos encontrou</span>
+<h2 style="font-size:18px;font-weight:800;color:#0B1829;margin-bottom:20px;">Você procurou por <strong>${srv.nome}</strong> em <strong>${cid.nome}</strong>? Que bom que nos achou!</h2>
+<p style="font-size:13px;color:var(--mu);margin-bottom:16px;">A Santo Onofre Serviços atende as principais buscas relacionadas a segurança e controle de acesso em ${cid.nome} e região de Minas Gerais:</p>
+<ul style="display:flex;flex-wrap:wrap;gap:10px;list-style:none;">
+${[
+  `${srv.nome} em ${cid.nome}`,
+  `${srv.nome} em ${cid.nome} MG`,
+  `Empresa de ${srv.nome.toLowerCase()} em ${cid.nome}`,
+  `${srv.nome} em ${cid.nome} e região`,
+  `Controle de acesso em ${cid.nome}`,
+  `Orientador de público em ${cid.nome}`,
+  `Monitoramento patrimonial em ${cid.nome}`,
+  `Observação patrimonial ${cid.nome} MG`,
+  `Apoio operacional em ${cid.nome}`,
+  `${srv.nome} ${cid.nome} - Santo Onofre Serviços`
+].map(t => `<li style="background:var(--li);border:1px solid var(--bo);border-radius:20px;padding:6px 14px;font-size:11px;color:var(--mu);">${t}</li>`).join('')}
+</ul>
+</div>
+</section>
+
 <section class="faq-sec">
 <div class="wrap">
 <span class="stag">Dúvidas frequentes</span>
@@ -674,6 +696,7 @@ ${cidadesDestaque.map(c => `<a href="/seguranca-${c.slug}/" class="cidade-tag">$
 <div><div class="ft-title">Fale Conosco</div><a href="https://wa.me/${WATEL}" class="ft-link" target="_blank">${TEL}</a><span class="ft-link" style="cursor:default">Minas Gerais</span></div>
 </div>
 <div class="ft-bottom"><span class="ft-copy">© 2026 Santo Onofre Serviços · Todos os direitos reservados</span></div>
+<p style="font-size:10px;color:rgba(255,255,255,.12);line-height:1.6;margin-top:14px;max-width:860px;">A Santo Onofre Serviços não realiza atividade de segurança privada, vigilância patrimonial ou serviços regulamentados pela Polícia Federal, atuando exclusivamente em monitoramento, controle de acesso, apoio operacional e observação patrimonial.</p>
 </div>
 </footer>
 
