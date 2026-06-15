@@ -14,12 +14,12 @@ const servicos = [
     nome: 'Vigilância Patrimonial',
     h1: c => `Vigilância Patrimonial em ${c}, MG`,
     title: c => `Vigilância Patrimonial em ${c} - MG | Santo Onofre`,
-    desc: c => `Vigilância patrimonial em ${c}, MG. Vigilantes certificados, cobertura 24h e rondas ostensivas. Solicite proposta gratuita.`,
-    hero: c => `A Santo Onofre oferece vigilância patrimonial profissional em <strong>${c}</strong> com vigilantes certificados pela Polícia Federal, cobertura 24 horas e relatórios periódicos para empresas, condomínios e indústrias.`,
+    desc: c => `Vigilância patrimonial em ${c}, MG. Profissionais treinados, controle de acesso e orientação de público 24h. Solicite proposta gratuita.`,
+    hero: c => `A Santo Onofre oferece vigilância patrimonial profissional em <strong>${c}</strong> com profissionais treinados em controle de acesso e orientação de público, cobertura 24 horas e relatórios periódicos para empresas, condomínios e indústrias.`,
     badge: 'Vigilância Patrimonial',
     faq: [
-      { p: 'O que é vigilância patrimonial?', r: 'É o serviço de proteção de bens, instalações e pessoas por vigilantes armados ou desarmados com cobertura contínua e relatórios de ocorrências.' },
-      { p: 'Vigilantes da Santo Onofre são armados?', r: 'Oferecemos vigilância armada e desarmada conforme a necessidade. Todos os vigilantes são certificados pela Polícia Federal.' }
+      { p: 'O que é vigilância patrimonial?', r: 'É o serviço de proteção de bens, instalações e pessoas com controle de acesso, orientação de público e monitoramento contínuo, com relatórios periódicos de ocorrências.' },
+      { p: 'Como funciona a equipe da Santo Onofre?', r: 'Nossa equipe é formada por profissionais treinados em controle de acesso e orientação de público, atuando com postura, discrição e foco na segurança do seu patrimônio.' }
     ]
   },
   {
@@ -28,7 +28,7 @@ const servicos = [
     h1: c => `Empresa de Segurança Patrimonial em ${c}, MG`,
     title: c => `Segurança Patrimonial em ${c} - MG | Santo Onofre`,
     desc: c => `Empresa de segurança patrimonial em ${c}, MG. Proteção para empresas e condomínios com vigilantes 24h. Solicite proposta gratuita.`,
-    hero: c => `A Santo Onofre é especialista em segurança patrimonial em <strong>${c}</strong>, protegendo empresas, condomínios e indústrias com vigilantes treinados, monitoramento eletrônico e controle de acesso.`,
+    hero: c => `A Santo Onofre é especialista em segurança patrimonial em <strong>${c}</strong>, protegendo empresas, condomínios e indústrias com controle de acesso, orientação de público e monitoramento eletrônico integrado.`,
     badge: 'Segurança Patrimonial',
     faq: [
       { p: 'Qual a diferença entre segurança patrimonial e vigilância?', r: 'A segurança patrimonial engloba toda a estratégia de proteção — vigilantes, câmeras, controle de acesso e rondas. Vigilância é um dos elementos desse conjunto.' },
@@ -44,8 +44,8 @@ const servicos = [
     hero: c => `A Santo Onofre Serviços é uma empresa de segurança em <strong>${c}</strong> com mais de 10 anos de mercado, oferecendo soluções completas: vigilantes, câmeras, controle de acesso e rondas motorizadas.`,
     badge: 'Empresa de Segurança',
     faq: [
-      { p: 'Como escolher uma empresa de segurança confiável?', r: 'Verifique o registro na Polícia Federal, a experiência no setor e a qualidade do treinamento dos vigilantes. A Santo Onofre cumpre todos esses critérios.' },
-      { p: 'A empresa de segurança precisa de registro especial?', r: 'Sim. Empresas de segurança privada precisam de autorização da Polícia Federal (DPF). A Santo Onofre opera com toda a documentação regularizada.' }
+      { p: 'Como escolher uma empresa de segurança confiável?', r: 'Avalie a experiência no setor, o treinamento das equipes e a capacidade de atender seu perfil de negócio. A Santo Onofre oferece controle de acesso e orientação de público com profissionalismo e comprometimento.' },
+      { p: 'A Santo Onofre atende empresas de todos os portes?', r: 'Sim. Atendemos pequenos comércios, condomínios e grandes indústrias com soluções de controle de acesso e orientação de público adaptadas a cada necessidade.' }
     ]
   },
   {
@@ -53,12 +53,12 @@ const servicos = [
     nome: 'Empresa de Vigilantes',
     h1: c => `Empresa de Vigilantes em ${c}, MG`,
     title: c => `Empresa de Vigilantes em ${c} - MG | Santo Onofre`,
-    desc: c => `Empresa de vigilantes em ${c}, MG. Fornecimento de vigilantes certificados para empresas, condomínios e indústrias. Solicite proposta.`,
-    hero: c => `A Santo Onofre fornece vigilantes certificados pela Polícia Federal para empresas e condomínios em <strong>${c}</strong>. Todos os profissionais passam por treinamento técnico contínuo e reciclagem semestral.`,
-    badge: 'Vigilantes Certificados',
+    desc: c => `Empresa de vigilantes em ${c}, MG. Profissionais de controle de acesso e orientação de público para empresas, condomínios e indústrias. Solicite proposta.`,
+    hero: c => `A Santo Onofre fornece profissionais de controle de acesso e orientação de público para empresas e condomínios em <strong>${c}</strong>. Todos passam por treinamento técnico contínuo com foco em postura, segurança e atendimento.`,
+    badge: 'Controle de Acesso',
     faq: [
-      { p: 'Como contratar vigilantes para minha empresa?', r: 'Entre em contato, descrevemos seu perfil de segurança e fornecemos vigilantes devidamente certificados pela Polícia Federal no prazo acordado.' },
-      { p: 'Vigilantes da Santo Onofre têm treinamento específico?', r: 'Sim. Além da certificação obrigatória pela PF, nossos vigilantes recebem treinamento operacional contínuo e reciclagem semestral.' }
+      { p: 'Como contratar profissionais de controle de acesso para minha empresa?', r: 'Entre em contato, descrevemos seu perfil de operação e dimensionamos a equipe ideal para seu negócio em ${c} com agilidade.' },
+      { p: 'Os profissionais da Santo Onofre têm treinamento específico?', r: 'Sim. Nossa equipe recebe treinamento operacional contínuo em controle de acesso, orientação de público e gestão de fluxo de pessoas.' }
     ]
   },
   {
@@ -123,7 +123,7 @@ const servicos = [
     badge: 'Portaria de Prédio',
     faq: [
       { p: 'Qual a função do porteiro de prédio?', r: 'O porteiro controla o acesso de moradores, visitantes e prestadores de serviço, identifica pessoas, recebe correspondências e aciona o protocolo de emergência quando necessário.' },
-      { p: 'Qual a diferença entre porteiro e vigilante?', r: 'O porteiro foca em triagem e atendimento. O vigilante é habilitado pela Polícia Federal para ação em situações de risco. Oferecemos os dois serviços integrados.' }
+      { p: 'Qual a diferença entre porteiro e orientador de público?', r: 'O porteiro foca em triagem e atendimento de moradores. O orientador de público faz gestão de fluxo, controle de acesso e abordagem discreta em ambientes de maior movimento. Oferecemos os dois perfis integrados.' }
     ]
   },
   {
@@ -261,8 +261,8 @@ const servicos = [
     nome: 'Vigilância Noturna',
     h1: c => `Vigilância Noturna em ${c}, MG`,
     title: c => `Vigilância Noturna em ${c} - MG | Santo Onofre`,
-    desc: c => `Vigilância noturna em ${c}, MG. Proteção de empresas, canteiros e condomínios durante a noite com vigilantes certificados. Solicite proposta.`,
-    hero: c => `A Santo Onofre oferece vigilância noturna em <strong>${c}</strong> para empresas, canteiros de obra, condomínios e comércios. Vigilantes certificados garantem proteção durante as horas de maior vulnerabilidade, com rondas e comunicação contínua.`,
+    desc: c => `Vigilância noturna em ${c}, MG. Proteção de empresas, canteiros e condomínios durante a noite com profissionais treinados. Solicite proposta.`,
+    hero: c => `A Santo Onofre oferece vigilância noturna em <strong>${c}</strong> para empresas, canteiros de obra, condomínios e comércios. Profissionais treinados em controle de acesso e orientação de público garantem proteção durante as horas de maior vulnerabilidade, com rondas e comunicação contínua.`,
     badge: 'Vigilância Noturna',
     faq: [
       { p: 'Como funciona a vigilância noturna?', r: 'Nossos vigilantes assumem o posto ao final do expediente, realizam rondas periódicas pelo perímetro, monitoram câmeras e registram toda a movimentação até o início do próximo dia.' },
@@ -288,11 +288,11 @@ const servicos = [
     h1: c => `Segurança para Indústrias em ${c}, MG`,
     title: c => `Segurança para Indústrias em ${c} - MG | Santo Onofre`,
     desc: c => `Segurança para indústrias em ${c}, MG. Vigilância patrimonial, controle de acesso e monitoramento 24h. Solicite proposta.`,
-    hero: c => `A Santo Onofre oferece segurança especializada para indústrias em <strong>${c}</strong>: vigilância armada de perímetro, controle de acesso de funcionários e fornecedores, monitoramento de pátios e proteção de equipamentos de alto valor.`,
+    hero: c => `A Santo Onofre oferece segurança especializada para indústrias em <strong>${c}</strong>: controle de acesso de funcionários e fornecedores, orientação de público no perímetro, monitoramento de pátios e proteção de equipamentos de alto valor.`,
     badge: 'Segurança Industrial',
     faq: [
       { p: 'Quais os principais riscos de segurança em indústrias?', r: 'Furto de insumos e produtos, sabotagem de equipamentos e acesso não autorizado são os principais desafios. A Santo Onofre tem protocolos específicos para cada tipo de indústria.' },
-      { p: 'A Santo Onofre atende indústrias de alto risco?', r: 'Sim. Temos protocolos para indústrias químicas, farmacêuticas, petroquímicas e mineradoras, com vigilantes treinados para os riscos específicos desses ambientes.' }
+      { p: 'A Santo Onofre atende indústrias de alto risco?', r: 'Sim. Temos protocolos de controle de acesso e orientação de público para indústrias químicas, farmacêuticas, petroquímicas e mineradoras, adaptados aos riscos específicos de cada ambiente.' }
     ]
   },
   {
@@ -416,7 +416,7 @@ const cidadesRicas = [
 // ============================================================
 function ct(nome, slug) {
   const variacoes = [
-    `${nome} é um município de Minas Gerais com economia ativa e crescente demanda por serviços de segurança patrimonial profissional. A expansão comercial e de condomínios residenciais na cidade eleva constantemente a necessidade de vigilância especializada. A Santo Onofre Serviços atende empresas, condomínios e indústrias em ${nome} com equipes certificadas.`,
+    `${nome} é um município de Minas Gerais com economia ativa e crescente demanda por serviços de segurança patrimonial profissional. A expansão comercial e de condomínios residenciais na cidade eleva constantemente a necessidade de controle de acesso e orientação de público. A Santo Onofre Serviços atende empresas, condomínios e indústrias em ${nome} com equipes treinadas.`,
     `${nome} conta com setor comercial e industrial em crescimento, o que aumenta a demanda por segurança patrimonial profissional. A Santo Onofre Serviços oferece vigilância, controle de acesso e monitoramento eletrônico para empresas e condomínios em ${nome} e toda a região.`,
     `Com desenvolvimento econômico consistente, ${nome} concentra empresas, condomínios e estabelecimentos que necessitam de proteção patrimonial especializada. A Santo Onofre oferece soluções completas de segurança para todos os portes de negócio em ${nome}, MG.`
   ];
@@ -427,7 +427,7 @@ function ct(nome, slug) {
     bairros: 'Centro, Bairro Industrial, Área Comercial, Bairros Residenciais',
     faq: [
       { p: `Como contratar segurança patrimonial em ${nome}?`, r: `Entre em contato via WhatsApp ${TEL} ou pelo formulário do site. Nossa equipe prepara proposta personalizada para sua empresa em ${nome} em até 24 horas.` },
-      { p: `A Santo Onofre atende ${nome} com equipe treinada?`, r: `Sim. Atendemos ${nome} com vigilantes certificados pela Polícia Federal e suporte da nossa central de operações em Minas Gerais.` }
+      { p: `A Santo Onofre atende ${nome} com equipe treinada?`, r: `Sim. Atendemos ${nome} com profissionais treinados em controle de acesso e orientação de público, com suporte da nossa central de operações em Minas Gerais.` }
     ]
   };
 }
@@ -609,7 +609,7 @@ ${cid.bairros.split(', ').map(b => `<span class="bairro-tag">${b}</span>`).join(
 <p class="sec-sub">Além de <strong>${srv.nome}</strong>, a Santo Onofre oferece soluções completas de segurança para empresas de todos os portes em <strong>${cid.nome}</strong> e região.</p>
 <div class="gold-line"></div>
 <div class="srv-grid">
-<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Vigilância Patrimonial</h3><p>Vigilantes certificados para proteção de empresas, condomínios e indústrias em ${cid.nome} 24 horas.</p></div>
+<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Vigilância Patrimonial</h3><p>Profissionais treinados para proteção de empresas, condomínios e indústrias em ${cid.nome} com cobertura 24 horas.</p></div>
 <div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h3>Controle de Acesso</h3><p>Gestão eletrônica e presencial de entrada e saída com registros completos para empresas em ${cid.nome}.</p></div>
 <div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Monitoramento Eletrônico</h3><p>Câmeras CFTV e central de monitoramento 24h integrados à vigilância presencial em ${cid.nome}.</p></div>
 <div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><h3>Ronda Motorizada</h3><p>Patrulhamento preventivo em horários programados para máxima proteção do seu patrimônio em ${cid.nome}.</p></div>
@@ -635,7 +635,7 @@ ${faqHtml}
 <div class="gold-line" style="background:linear-gradient(90deg,#FFCC00,#FFE033);"></div>
 <div class="why-grid">
 <div class="why-card"><div class="why-num">+10</div><div class="why-label">Anos de experiência em segurança patrimonial em MG</div></div>
-<div class="why-card"><div class="why-num">100%</div><div class="why-label">Vigilantes certificados e treinados pela Polícia Federal</div></div>
+<div class="why-card"><div class="why-num">100%</div><div class="why-label">Profissionais treinados em controle de acesso e orientação de público</div></div>
 <div class="why-card"><div class="why-num">24/7</div><div class="why-label">Atendimento e cobertura ininterrupta para sua empresa</div></div>
 <div class="why-card"><div class="why-num">0</div><div class="why-label">Burocracia — contratos flexíveis e proposta rápida</div></div>
 </div>
