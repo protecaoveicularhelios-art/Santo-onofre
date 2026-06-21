@@ -287,6 +287,7 @@ function gerarPagina(c) {
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <meta name="description" content="Empresa de segurança patrimonial em ${nome}, MG. Vigilância, controle de acesso, monitoramento eletrônico e rondas ostensivas. Solicite proposta agora."/>
 <title>Empresa de Segurança em ${nome} - MG | Santo Onofre Serviços</title>
 <meta name="robots" content="index, follow"/>

@@ -530,6 +530,7 @@ function gerarPagina(srv, cid) {
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <meta name="description" content="${srv.desc(cid.nome)}"/>
 <title>${srv.title(cid.nome)}</title>
 <meta name="robots" content="index, follow"/>
