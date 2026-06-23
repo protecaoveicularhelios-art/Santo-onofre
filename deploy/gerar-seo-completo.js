@@ -689,6 +689,9 @@ ${faqHtml}
 <h2>Atendemos ${cid.nome} e Toda a Região de MG</h2>
 <p class="sec-sub">Além de ${cid.nome}, a Santo Onofre atende nas principais cidades de Minas Gerais.</p>
 <div class="gold-line"></div>
+<div style="border-radius:14px;overflow:hidden;border:1px solid var(--bo);margin-bottom:28px;">
+<iframe src="https://www.google.com/maps?q=${encodeURIComponent(cid.nome + ', MG, Brasil')}&output=embed" width="100%" height="320" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ${cid.nome}, MG"></iframe>
+</div>
 <div class="cidades-grid">
 ${cidadesDestaque.map(c => `<a href="/seguranca-${c.slug}/" class="cidade-tag">${c.nome}</a>`).join('\n')}
 </div>

@@ -474,6 +474,9 @@ ${faqHtml}
 <h2>Atendemos ${nome} e Toda a Região de MG</h2>
 <p class="sec-sub">Além de ${nome}, a Santo Onofre atende empresas e condomínios nas principais cidades de Minas Gerais.</p>
 <div class="gold-line"></div>
+<div style="border-radius:14px;overflow:hidden;border:1px solid var(--bo);margin-bottom:28px;">
+<iframe src="https://www.google.com/maps?q=${encodeURIComponent(nome + ', MG, Brasil')}&output=embed" width="100%" height="320" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ${nome}, MG"></iframe>
+</div>
 <div class="cidades-grid">
 <a href="/seguranca-belo-horizonte/" class="cidade-tag">Belo Horizonte</a>
 <a href="/seguranca-uberlandia/" class="cidade-tag">Uberlândia</a>
