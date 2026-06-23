@@ -426,6 +426,24 @@ const servicos = [
       { p: 'Atendem condomínios?', r: 'Sim. Disponibilizamos vigias profissionais para condomínios, comércios, galpões e empresas de todos os portes.' },
       { p: 'É possível contratar vigia por escala ou turno?', r: 'Sim. Montamos escalas por turno fixo, revezamento ou cobertura 24 horas, de acordo com o perfil de risco e o horário de funcionamento do local.' }
     ]
+  },
+  {
+    slug: 'controlador-de-acesso',
+    nome: 'Controlador de Acesso',
+    h1: c => `Controlador de Acesso em ${c}, MG`,
+    title: c => {
+      const full = `Controlador de Acesso em ${c} - MG | Santo Onofre`;
+      return full.length <= 60 ? full : `Controlador de Acesso em ${c}, MG`;
+    },
+    desc: c => `Controlador de acesso em ${c}: gestão presencial de entrada e saída para empresas e condomínios. Santo Onofre Serviços.`,
+    hero: c => `A Santo Onofre fornece controladores de acesso profissionais treinados para gestão presencial de entrada e saída de pessoas e veículos em empresas, indústrias e condomínios em <strong>${c}</strong>.`,
+    badge: 'Controlador de Acesso',
+    faq: [
+      { p: 'O que faz um controlador de acesso?', r: 'O controlador de acesso é o profissional responsável pela gestão presencial de entrada e saída de pessoas e veículos, identificação de visitantes e registro de movimentações em empresas, indústrias e condomínios.' },
+      { p: 'Qual a diferença entre controlador de acesso e porteiro?', r: 'O controlador de acesso tem foco operacional em ambientes empresariais e industriais, com protocolos de identificação e registro mais rígidos. O porteiro tem perfil mais voltado ao atendimento residencial em condomínios.' },
+      { p: 'O controlador registra entradas e saídas?', r: 'Sim. Mantemos registro detalhado de visitantes, prestadores de serviço e veículos, com relatórios periódicos para o cliente.' },
+      { p: 'Atendem obras e canteiros?', r: 'Sim. Disponibilizamos controladores de acesso para canteiros de obras, controlando a entrada de trabalhadores, fornecedores e veículos.' }
+    ]
   }
 ];
 
