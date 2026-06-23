@@ -390,6 +390,24 @@ const servicos = [
       { p: 'A Santo Onofre atende condomínios?', r: 'Sim. Fornecemos e instalamos sistemas de câmeras para condomínios residenciais e comerciais, cobrindo portarias, garagens, áreas comuns e perímetro externo.' },
       { p: 'Qual o prazo de instalação?', r: 'Após a visita técnica e definição do projeto, a instalação costuma ser concluída em poucos dias úteis, conforme a quantidade de câmeras e a complexidade do local.' }
     ]
+  },
+  {
+    slug: 'recepcionista',
+    nome: 'Recepcionista Profissional',
+    h1: c => `Recepcionista Profissional em ${c}, MG`,
+    title: c => {
+      const full = `Recepcionista em ${c} - MG | Santo Onofre Serviços`;
+      return full.length <= 60 ? full : `Recepcionista em ${c}, MG | Santo Onofre`;
+    },
+    desc: c => `Recepcionista profissional em ${c} para empresas e condomínios. Atendimento, triagem e controle de acesso. Santo Onofre Serviços.`,
+    hero: c => `A Santo Onofre disponibiliza recepcionistas treinadas para atendimento ao público, triagem de visitantes e controle de entrada em empresas, condomínios e clínicas em <strong>${c}</strong>.`,
+    badge: 'Recepcionista Profissional',
+    faq: [
+      { p: 'Qual a diferença entre recepcionista e porteiro?', r: 'A recepcionista foca no atendimento ao público, agendamentos e triagem de visitantes em ambientes corporativos como clínicas, escritórios e hotéis. O porteiro foca no controle de entrada e saída em ambiente residencial.' },
+      { p: 'A recepcionista da Santo Onofre faz triagem de visitantes?', r: 'Sim. Nossas recepcionistas são treinadas para identificar e registrar visitantes, direcionar atendimentos e seguir os protocolos de acesso definidos pelo cliente.' },
+      { p: 'Atendem condomínios residenciais?', r: 'Sim. Disponibilizamos recepcionistas para condomínios residenciais e comerciais, com foco em atendimento cordial a moradores e visitantes.' },
+      { p: 'O serviço pode ser contratado por período parcial?', r: 'Sim. Oferecemos contratos para jornada integral, meio período ou horários específicos, conforme a necessidade da sua empresa ou condomínio.' }
+    ]
   }
 ];
 
