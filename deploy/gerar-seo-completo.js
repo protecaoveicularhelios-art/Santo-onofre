@@ -444,6 +444,24 @@ const servicos = [
       { p: 'O controlador registra entradas e saídas?', r: 'Sim. Mantemos registro detalhado de visitantes, prestadores de serviço e veículos, com relatórios periódicos para o cliente.' },
       { p: 'Atendem obras e canteiros?', r: 'Sim. Disponibilizamos controladores de acesso para canteiros de obras, controlando a entrada de trabalhadores, fornecedores e veículos.' }
     ]
+  },
+  {
+    slug: 'porteiro',
+    nome: 'Porteiro',
+    h1: c => `Porteiro em ${c}, MG`,
+    title: c => {
+      const full = `Porteiro em ${c} - MG | Santo Onofre Serviços`;
+      return full.length <= 60 ? full : `Porteiro em ${c}, MG | Santo Onofre`;
+    },
+    desc: c => `Porteiro profissional em ${c} para condomínios, prédios e empresas. Triagem e controle de acesso. Santo Onofre Serviços.`,
+    hero: c => `A Santo Onofre disponibiliza porteiros profissionais para condomínios, prédios comerciais, empresas e estabelecimentos em <strong>${c}</strong>. Triagem, identificação de visitantes e controle de entrada com registro completo.`,
+    badge: 'Porteiro Profissional',
+    faq: [
+      { p: 'Qual a diferença entre porteiro e controlador de acesso?', r: 'O porteiro tem perfil mais voltado ao atendimento e triagem em condomínios e prédios. O controlador de acesso atua em ambientes empresariais e industriais, com protocolos de registro mais rígidos para pessoas e veículos.' },
+      { p: 'O porteiro da Santo Onofre trabalha em turnos de 12h?', r: 'Sim. Montamos escalas de 12x36, diurnas, noturnas ou cobertura 24 horas, conforme a necessidade do condomínio ou empresa.' },
+      { p: 'Atendem condomínios horizontais?', r: 'Sim. Disponibilizamos porteiros para condomínios horizontais e verticais, prédios comerciais, empresas e estabelecimentos de todos os portes.' },
+      { p: 'É possível terceirizar apenas o porteiro do turno noturno?', r: 'Sim. Oferecemos contratação de turnos específicos, incluindo apenas o período noturno, conforme a necessidade do cliente.' }
+    ]
   }
 ];
 
