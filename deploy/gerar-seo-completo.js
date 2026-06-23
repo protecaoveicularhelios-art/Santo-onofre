@@ -408,6 +408,24 @@ const servicos = [
       { p: 'Atendem condomínios residenciais?', r: 'Sim. Disponibilizamos recepcionistas para condomínios residenciais e comerciais, com foco em atendimento cordial a moradores e visitantes.' },
       { p: 'O serviço pode ser contratado por período parcial?', r: 'Sim. Oferecemos contratos para jornada integral, meio período ou horários específicos, conforme a necessidade da sua empresa ou condomínio.' }
     ]
+  },
+  {
+    slug: 'vigia-profissional',
+    nome: 'Vigia Profissional',
+    h1: c => `Vigia Profissional em ${c}, MG`,
+    title: c => {
+      const full = `Vigia Profissional em ${c} - MG | Santo Onofre`;
+      return full.length <= 60 ? full : `Vigia Profissional em ${c}, MG`;
+    },
+    desc: c => `Vigia profissional em ${c} para empresas e condomínios. Observação patrimonial e controle de perímetro 24h. Santo Onofre Serviços.`,
+    hero: c => `A Santo Onofre disponibiliza vigias profissionais treinados para observação patrimonial, controle de perímetro e dissuasão de ocorrências em empresas, comércios e condomínios em <strong>${c}</strong>.`,
+    badge: 'Vigia Profissional',
+    faq: [
+      { p: 'Qual a diferença entre vigia e vigilante armado?', r: 'O vigia profissional da Santo Onofre atua em observação patrimonial e apoio operacional, sem porte de arma ou atribuições regulamentadas pela Polícia Federal. O foco é a presença ostensiva e o controle de perímetro.' },
+      { p: 'O vigia da Santo Onofre trabalha à noite?', r: 'Sim. Disponibilizamos vigias em regime diurno, noturno ou 24 horas, conforme a necessidade de observação patrimonial do seu negócio.' },
+      { p: 'Atendem condomínios?', r: 'Sim. Disponibilizamos vigias profissionais para condomínios, comércios, galpões e empresas de todos os portes.' },
+      { p: 'É possível contratar vigia por escala ou turno?', r: 'Sim. Montamos escalas por turno fixo, revezamento ou cobertura 24 horas, de acordo com o perfil de risco e o horário de funcionamento do local.' }
+    ]
   }
 ];
 
