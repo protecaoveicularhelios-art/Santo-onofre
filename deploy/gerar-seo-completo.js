@@ -372,6 +372,24 @@ const servicos = [
       { p: 'Quais os desafios de segurança em hospitais?', r: 'Controle de acesso em UTIs, proteção de medicamentos e equipamentos de alto valor, gestão de visitantes e segurança em emergências são os principais desafios hospitalares.' },
       { p: 'A Santo Onofre treina vigilantes para ambientes de saúde?', r: 'Sim. Treinamos com protocolos específicos para hospitais e clínicas, incluindo abordagem respeitosa a pacientes e familiares e coordenação com equipes de saúde.' }
     ]
+  },
+  {
+    slug: 'cameras-de-seguranca',
+    nome: 'Câmeras de Segurança',
+    h1: c => `Câmeras de Segurança em ${c}, MG`,
+    title: c => {
+      const full = `Câmeras de Segurança em ${c} - MG | Santo Onofre`;
+      return full.length <= 60 ? full : `Câmeras de Segurança em ${c}, MG`;
+    },
+    desc: c => `Câmeras de segurança em ${c} com instalação profissional. Sistemas CFTV, câmeras IP e monitoramento 24h. Santo Onofre Serviços.`,
+    hero: c => `A Santo Onofre fornece e instala câmeras de segurança em <strong>${c}</strong>: sistemas CFTV analógicos e digitais, câmeras IP de alta resolução, gravação em nuvem e monitoramento remoto para empresas, condomínios e comércios.`,
+    badge: 'Câmeras de Segurança',
+    faq: [
+      { p: 'Que tipo de câmera é indicada para ambientes externos?', r: 'Para áreas externas indicamos câmeras IP com proteção IP66/67 contra chuva e poeira, visão noturna infravermelho e resolução Full HD a 4K, garantindo imagens nítidas em qualquer condição climática.' },
+      { p: 'As câmeras da Santo Onofre gravam em nuvem?', r: 'Sim. Oferecemos gravação local em DVR/NVR e também em nuvem, com acesso remoto pelo smartphone para visualizar as imagens em tempo real de qualquer lugar.' },
+      { p: 'A Santo Onofre atende condomínios?', r: 'Sim. Fornecemos e instalamos sistemas de câmeras para condomínios residenciais e comerciais, cobrindo portarias, garagens, áreas comuns e perímetro externo.' },
+      { p: 'Qual o prazo de instalação?', r: 'Após a visita técnica e definição do projeto, a instalação costuma ser concluída em poucos dias úteis, conforme a quantidade de câmeras e a complexidade do local.' }
+    ]
   }
 ];
 
