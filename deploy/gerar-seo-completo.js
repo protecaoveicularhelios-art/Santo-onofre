@@ -560,7 +560,7 @@ const cidadesExtras = [
   'Cataguases|cataguases', 'Leopoldina|leopoldina', 'Além Paraíba|alem-paraiba',
   'São João del-Rei|sao-joao-del-rei', 'Rio Pomba|rio-pomba',
   'Visconde do Rio Branco|visconde-do-rio-branco', 'Carangola|carangola',
-  'São João Nepomuceno|sao-joao-nepomuceno', 'Cataguases|cataguases-mg',
+  'São João Nepomuceno|sao-joao-nepomuceno',
   // Vale do Rio Doce / Vale do Aço
   'Timóteo|timoteo', 'Caratinga|caratinga', 'Manhuaçu|manhuacu', 'Nanuque|nanuque',
   'Aimorés|aimores', 'Conselheiro Pena|conselheiro-pena', 'Inhapim|inhapim',
@@ -576,10 +576,10 @@ const cidadesExtras = [
   'Itambacuri|itambacuri', 'Carlos Chagas|carlos-chagas', 'Poté|pote',
   'Pedras de Maria da Cruz|pedras-de-maria-da-cruz',
   // extras
-  'Nova Lima|nova-lima-mg', 'Ouro Branco|ouro-branco', 'Rio Acima|rio-acima',
+  'Ouro Branco|ouro-branco', 'Rio Acima|rio-acima',
   'São Sebastião do Oeste|sao-sebastiao-do-oeste', 'Abadia dos Dourados|abadia-dos-dourados',
-  'São Gotardo|sao-gotardo-mg', 'Perdizes|perdizes', 'Ibiá|ibia',
-  'Lagoa da Prata|lagoa-da-prata', 'Bom Despacho|bom-despacho-mg',
+  'Perdizes|perdizes', 'Ibiá|ibia',
+  'Lagoa da Prata|lagoa-da-prata',
   'João Pinheiro|joao-pinheiro', 'Vazante|vazante', 'Presidente Olegário|presidente-olegario'
 ].map(s => { const [nome, slug] = s.split('|'); return ct(nome, slug); })
   // Remover duplicatas de slug
