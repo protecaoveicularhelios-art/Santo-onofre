@@ -589,6 +589,18 @@ const cidades = [...cidadesRicas, ...cidadesExtras];
 
 // CSS agora em /seo.css — edite lá para atualizar todas as páginas de uma vez
 
+// Serviços em destaque para cross-linking entre páginas da mesma cidade
+const servicosDestaqueIcones = {
+  'vigilancia-patrimonial': '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  'controle-de-acesso': '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>',
+  'monitoramento-de-cameras': '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+  'ronda-motorizada': '<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',
+  'seguranca-para-eventos': '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+  'portaria-de-condominio': '<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/>',
+  'seguranca-patrimonial': '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'
+};
+const slugsDestaque = Object.keys(servicosDestaqueIcones);
+
 // ============================================================
 // GERADOR DE PÁGINA
 // ============================================================
@@ -614,6 +626,13 @@ function gerarPagina(srv, cid) {
   });
 
   const cidadesDestaque = cidades.slice(0, 15).filter(c => c.slug !== cid.slug).slice(0, 12);
+
+  // 6 outros serviços na mesma cidade, para cross-linking (nunca o próprio srv.slug)
+  const outrosSlugs = slugsDestaque.filter(s => s !== srv.slug).slice(0, 6);
+  const outrosServicos = outrosSlugs.map(s => {
+    const def = servicos.find(x => x.slug === s);
+    return { slug: s, nome: def.nome, icon: servicosDestaqueIcones[s] };
+  });
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -700,12 +719,7 @@ ${cid.bairros.split(', ').map(b => `<span class="bairro-tag">${b}</span>`).join(
 <p class="sec-sub">Além de <strong>${srv.nome}</strong>, a Santo Onofre oferece soluções completas de segurança para empresas de todos os portes em <strong>${cid.nome}</strong> e região.</p>
 <div class="gold-line"></div>
 <div class="srv-grid">
-<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Vigilância Patrimonial</h3><p>Profissionais treinados para proteção de empresas, condomínios e indústrias em ${cid.nome} com cobertura 24 horas.</p></div>
-<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h3>Controle de Acesso</h3><p>Gestão eletrônica e presencial de entrada e saída com registros completos para empresas em ${cid.nome}.</p></div>
-<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Monitoramento Eletrônico</h3><p>Câmeras CFTV e central de monitoramento 24h integrados à vigilância presencial em ${cid.nome}.</p></div>
-<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><h3>Ronda Motorizada</h3><p>Patrulhamento preventivo em horários programados para máxima proteção do seu patrimônio em ${cid.nome}.</p></div>
-<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Segurança em Eventos</h3><p>Equipes especializadas para eventos corporativos, formaturas e shows em ${cid.nome} e região.</p></div>
-<div class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div><h3>Portaria Profissional</h3><p>Porteiros treinados para triagem, identificação e atendimento em condomínios e empresas de ${cid.nome}.</p></div>
+${outrosServicos.map(s => `<a href="/${s.slug}-em-${cid.slug}/" class="srv-card"><div class="srv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFCC00" stroke-width="1.8">${s.icon}</svg></div><h3>${s.nome} em ${cid.nome}</h3><p>Conheça nosso serviço de ${s.nome.toLowerCase()} em ${cid.nome}, MG.</p></a>`).join('\n')}
 </div>
 </div>
 </section>
