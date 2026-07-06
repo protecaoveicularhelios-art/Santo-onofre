@@ -587,6 +587,10 @@ const cidadesExtras = [
 
 const cidades = [...cidadesRicas, ...cidadesExtras];
 
+// Apenas as cidades "ricas" ganham página-pilar /seguranca-{slug}/ (geradas por gerar-lps.js).
+// Cidades fora dessa lista não têm essa página — não podem virar link, senão quebram (404).
+const cidadesComPilar = new Set(cidadesRicas.map(c => c.slug));
+
 // CSS agora em /seo.css — edite lá para atualizar todas as páginas de uma vez
 
 // Serviços em destaque para cross-linking entre páginas da mesma cidade
@@ -681,7 +685,7 @@ function gerarPagina(srv, cid) {
 <div class="lp-hero-wrap">
 <div class="breadcrumb">
   <a href="/">Início</a><span>›</span>
-  <a href="/seguranca-${cid.slug}/">${cid.nome}</a><span>›</span>
+  ${cidadesComPilar.has(cid.slug) ? `<a href="/seguranca-${cid.slug}/">${cid.nome}</a>` : `<span style="color:rgba(255,255,255,.5)">${cid.nome}</span>`}<span>›</span>
   <span style="color:rgba(255,255,255,.5)">${srv.nome}</span>
 </div>
 <div class="lp-tag">${srv.badge} em ${cid.nome} - MG</div>
@@ -833,9 +837,11 @@ function gerarSitemap(servicos, cidades) {
     `<url><loc>${DOMAIN}/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority><lastmod>${hoje}</lastmod></url>`,
   ].join('\n  ');
 
-  const urlsLpsCidades = cidades.map(c =>
-    `<url><loc>${DOMAIN}/seguranca-${c.slug}/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>${hoje}</lastmod></url>`
-  ).join('\n  ');
+  const urlsLpsCidades = cidades
+    .filter(c => cidadesComPilar.has(c.slug))
+    .map(c =>
+      `<url><loc>${DOMAIN}/seguranca-${c.slug}/</loc><changefreq>monthly</changefreq><priority>0.7</priority><lastmod>${hoje}</lastmod></url>`
+    ).join('\n  ');
 
   const urlsSeo = servicos.flatMap(s =>
     cidades.map(c =>
