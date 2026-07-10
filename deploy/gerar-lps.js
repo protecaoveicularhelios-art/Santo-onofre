@@ -285,6 +285,21 @@ const servicosDestaque = [
   { slug: 'portaria-de-condominio', nome: 'Portaria Profissional', desc: 'Porteiros treinados para triagem, identificação e atendimento em condomínios e empresas.', icon: '<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/>' }
 ];
 
+// Garante que o <title> nunca passe de 60 caracteres (limite pratico do Google nos resultados de busca)
+function tituloSeoPilar(cidade, max = 60) {
+  const candidatos = [
+    `Empresa de Segurança em ${cidade} - MG | Santo Onofre Serviços`,
+    `Empresa de Segurança em ${cidade} - MG | Santo Onofre`,
+    `Empresa de Segurança em ${cidade}, MG | Santo Onofre`,
+    `Segurança Patrimonial em ${cidade} - MG`,
+    `Segurança Patrimonial em ${cidade}, MG`
+  ];
+  for (const t of candidatos) if (t.length <= max) return t;
+  const base = candidatos[candidatos.length - 1];
+  const cortado = base.slice(0, max).replace(/\s+\S*$/, '');
+  return cortado.length > 0 ? cortado : base.slice(0, max);
+}
+
 function gerarPagina(c) {
   const { nome, slug, desc, bairros, faq } = c;
   const faqHtml = faq.map(f => `
@@ -300,7 +315,7 @@ function gerarPagina(c) {
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <meta name="description" content="Empresa de segurança patrimonial em ${nome}, MG. Vigilância, controle de acesso, monitoramento eletrônico e rondas ostensivas. Solicite proposta agora."/>
-<title>Empresa de Segurança em ${nome} - MG | Santo Onofre Serviços</title>
+<title>${tituloSeoPilar(nome)}</title>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://santoonofrevigilancia.com.br/seguranca-${slug}/"/>
 <script type="application/ld+json">

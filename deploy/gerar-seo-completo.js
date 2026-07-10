@@ -5,6 +5,22 @@ const DOMAIN = 'https://santoonofrevigilancia.com.br';
 const TEL = '(31) 98729-9396';
 const WATEL = '5531987299396';
 
+// Garante que nenhum <title> passe de 60 caracteres (limite pratico do Google nos resultados de busca)
+function tituloSeo(nome, cidade, max = 60) {
+  const candidatos = [
+    `${nome} em ${cidade} - MG | Santo Onofre`,
+    `${nome} em ${cidade}, MG | Santo Onofre`,
+    `${nome} em ${cidade} - MG`,
+    `${nome} em ${cidade}, MG`,
+    `${nome} em ${cidade}`
+  ];
+  for (const c of candidatos) if (c.length <= max) return c;
+  const base = candidatos[candidatos.length - 1];
+  const cortado = base.slice(0, max).replace(/\s+\S*$/, '');
+  return cortado.length > 0 ? cortado : base.slice(0, max);
+}
+
+
 // ============================================================
 // 28 SERVIÇOS
 // ============================================================
@@ -13,7 +29,7 @@ const servicos = [
     slug: 'vigilancia-patrimonial',
     nome: 'Vigilância Patrimonial',
     h1: c => `Vigilância Patrimonial em ${c}, MG`,
-    title: c => `Vigilância Patrimonial em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Vigilância Patrimonial', c),
     desc: c => `Vigilância patrimonial em ${c}, MG. Profissionais treinados, controle de acesso e orientação de público 24h. Solicite proposta gratuita.`,
     hero: c => `A Santo Onofre oferece vigilância patrimonial profissional em <strong>${c}</strong> com profissionais treinados em controle de acesso e orientação de público, cobertura 24 horas e relatórios periódicos para empresas, condomínios e indústrias.`,
     badge: 'Vigilância Patrimonial',
@@ -26,7 +42,7 @@ const servicos = [
     slug: 'seguranca-patrimonial',
     nome: 'Segurança Patrimonial',
     h1: c => `Empresa de Segurança Patrimonial em ${c}, MG`,
-    title: c => `Segurança Patrimonial em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança Patrimonial', c),
     desc: c => `Empresa de segurança patrimonial em ${c}, MG. Proteção para empresas e condomínios com vigilantes 24h. Solicite proposta gratuita.`,
     hero: c => `A Santo Onofre é especialista em segurança patrimonial em <strong>${c}</strong>, protegendo empresas, condomínios e indústrias com controle de acesso, orientação de público e monitoramento eletrônico integrado.`,
     badge: 'Segurança Patrimonial',
@@ -39,7 +55,7 @@ const servicos = [
     slug: 'empresa-de-seguranca',
     nome: 'Empresa de Segurança',
     h1: c => `Empresa de Segurança em ${c}, MG`,
-    title: c => `Empresa de Segurança em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Empresa de Segurança', c),
     desc: c => `Empresa de segurança em ${c}, MG. Vigilância, monitoramento, controle de acesso e rondas para empresas e condomínios. Solicite proposta.`,
     hero: c => `A Santo Onofre Serviços é uma empresa de segurança em <strong>${c}</strong> com mais de 10 anos de mercado, oferecendo soluções completas: vigilantes, câmeras, controle de acesso e rondas motorizadas.`,
     badge: 'Empresa de Segurança',
@@ -52,7 +68,7 @@ const servicos = [
     slug: 'empresa-de-vigilantes',
     nome: 'Empresa de Vigilantes',
     h1: c => `Empresa de Vigilantes em ${c}, MG`,
-    title: c => `Empresa de Vigilantes em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Empresa de Vigilantes', c),
     desc: c => `Empresa de vigilantes em ${c}, MG. Profissionais de controle de acesso e orientação de público para empresas, condomínios e indústrias. Solicite proposta.`,
     hero: c => `A Santo Onofre fornece profissionais de controle de acesso e orientação de público para empresas e condomínios em <strong>${c}</strong>. Todos passam por treinamento técnico contínuo com foco em postura, segurança e atendimento.`,
     badge: 'Controle de Acesso',
@@ -65,7 +81,7 @@ const servicos = [
     slug: 'seguranca-para-eventos',
     nome: 'Segurança para Eventos',
     h1: c => `Segurança para Eventos em ${c}, MG`,
-    title: c => `Segurança para Eventos em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Eventos', c),
     desc: c => `Segurança para eventos em ${c}, MG. Equipes para shows, formaturas, feiras e eventos corporativos. Solicite orçamento.`,
     hero: c => `A Santo Onofre oferece equipes especializadas em segurança para eventos em <strong>${c}</strong>: shows, formaturas, feiras, eventos corporativos e celebrações. Controle de acesso, gestão de fluxo e segurança operacional.`,
     badge: 'Segurança para Eventos',
@@ -78,7 +94,7 @@ const servicos = [
     slug: 'seguranca-para-shows',
     nome: 'Segurança para Shows',
     h1: c => `Segurança para Shows em ${c}, MG`,
-    title: c => `Segurança para Shows em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Shows', c),
     desc: c => `Segurança para shows e festivais em ${c}, MG. Equipes treinadas para controle de acesso e gestão de público. Solicite orçamento agora.`,
     hero: c => `Para shows e eventos musicais em <strong>${c}</strong>, a Santo Onofre oferece equipes treinadas em segurança de grandes públicos, controle de acesso, gestão de barreiras e prevenção de incidentes em palcos e backstage.`,
     badge: 'Segurança para Shows',
@@ -91,7 +107,7 @@ const servicos = [
     slug: 'seguranca-para-rodeios',
     nome: 'Segurança para Rodeios',
     h1: c => `Segurança para Rodeios em ${c}, MG`,
-    title: c => `Segurança para Rodeios em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Rodeios', c),
     desc: c => `Segurança para rodeios e festas do peão em ${c}, MG. Controle de acesso e segurança de público para grandes eventos rurais. Solicite orçamento.`,
     hero: c => `A Santo Onofre garante segurança completa para rodeios e festas do peão em <strong>${c}</strong>. Equipes experientes em controle de acesso, gestão de aglomerações, segurança de arena e shows musicais.`,
     badge: 'Segurança para Rodeios',
@@ -104,7 +120,7 @@ const servicos = [
     slug: 'seguranca-para-festas',
     nome: 'Segurança para Festas',
     h1: c => `Segurança para Festas e Eventos em ${c}, MG`,
-    title: c => `Segurança para Festas em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Festas', c),
     desc: c => `Segurança para festas, formaturas e eventos sociais em ${c}, MG. Equipes discretas e profissionais. Solicite orçamento personalizado.`,
     hero: c => `Para festas, formaturas, casamentos e eventos sociais em <strong>${c}</strong>, a Santo Onofre oferece equipes discretas e profissionais que garantem a tranquilidade dos anfitriões e a segurança dos convidados.`,
     badge: 'Segurança para Festas',
@@ -117,7 +133,7 @@ const servicos = [
     slug: 'portaria-de-predio',
     nome: 'Portaria de Prédio',
     h1: c => `Portaria de Prédio em ${c}, MG`,
-    title: c => `Portaria de Prédio em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Portaria de Prédio', c),
     desc: c => `Portaria de prédio profissional em ${c}, MG. Porteiros treinados para triagem, identificação e atendimento ao público. Solicite proposta.`,
     hero: c => `A Santo Onofre fornece porteiros profissionais para prédios comerciais e residenciais em <strong>${c}</strong>, com treinamento em triagem, identificação de visitantes, atendimento ao público e protocolo de emergências.`,
     badge: 'Portaria de Prédio',
@@ -130,7 +146,7 @@ const servicos = [
     slug: 'portaria-de-condominio',
     nome: 'Portaria de Condomínio',
     h1: c => `Portaria de Condomínio em ${c}, MG`,
-    title: c => `Portaria de Condomínio em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Portaria de Condomínio', c),
     desc: c => `Portaria de condomínio profissional em ${c}, MG. Gestão de acesso de moradores e visitantes com segurança e hospitalidade. Solicite proposta.`,
     hero: c => `A Santo Onofre oferece portaria profissional para condomínios residenciais e comerciais em <strong>${c}</strong>. Porteiros treinados para controle de acesso, triagem de visitantes e atendimento hospitaleiro aos moradores.`,
     badge: 'Portaria de Condomínio',
@@ -143,7 +159,7 @@ const servicos = [
     slug: 'portaria-virtual',
     nome: 'Portaria Virtual',
     h1: c => `Portaria Virtual em ${c}, MG`,
-    title: c => `Portaria Virtual em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Portaria Virtual', c),
     desc: c => `Portaria virtual para condomínios em ${c}, MG. Controle de acesso remoto com câmeras e interfone. Economia e segurança 24h. Solicite proposta.`,
     hero: c => `A Santo Onofre implementa portaria virtual para condomínios em <strong>${c}</strong>: controle de acesso remoto com câmeras HD, interfone digital e central de monitoramento 24h. Economia sem abrir mão da segurança.`,
     badge: 'Portaria Virtual',
@@ -156,7 +172,7 @@ const servicos = [
     slug: 'seguranca-para-obras',
     nome: 'Segurança para Obras',
     h1: c => `Segurança para Obras em ${c}, MG`,
-    title: c => `Segurança para Obras em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Obras', c),
     desc: c => `Segurança para obras e canteiros de construção em ${c}, MG. Vigilantes e vigias 24h para proteção de materiais e equipamentos. Solicite proposta.`,
     hero: c => `A Santo Onofre protege canteiros de obras em <strong>${c}</strong> com vigilantes especializados na proteção de materiais, equipamentos e máquinas contra furtos e vandalismo, em regime diurno, noturno ou 24 horas.`,
     badge: 'Segurança para Obras',
@@ -169,7 +185,7 @@ const servicos = [
     slug: 'vigia-para-obras',
     nome: 'Vigia para Obras',
     h1: c => `Vigia para Obras em ${c}, MG`,
-    title: c => `Vigia para Obras em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Vigia para Obras', c),
     desc: c => `Vigia para obras em ${c}, MG. Profissionais especializados em proteção de canteiros de construção. Cobertura diurna e noturna. Solicite proposta.`,
     hero: c => `A Santo Onofre fornece vigias especializados para obras em <strong>${c}</strong>, garantindo proteção contínua de materiais, ferramentas e equipamentos no canteiro de construção, em regime diurno, noturno ou 24 horas.`,
     badge: 'Vigia para Obras',
@@ -182,7 +198,7 @@ const servicos = [
     slug: 'seguranca-para-construcao',
     nome: 'Segurança para Construção Civil',
     h1: c => `Segurança para Construção Civil em ${c}, MG`,
-    title: c => `Segurança para Construção em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Construção', c),
     desc: c => `Segurança para construção civil em ${c}, MG. Proteção de canteiros, materiais e maquinário com equipes especializadas. Solicite proposta.`,
     hero: c => `Para empreendimentos de construção civil em <strong>${c}</strong>, a Santo Onofre oferece segurança completa: proteção de canteiro, controle de acesso de trabalhadores e fornecedores, vigilância de maquinário e monitoramento eletrônico.`,
     badge: 'Segurança para Construção',
@@ -195,7 +211,7 @@ const servicos = [
     slug: 'seguranca-eletronica',
     nome: 'Segurança Eletrônica',
     h1: c => `Segurança Eletrônica em ${c}, MG`,
-    title: c => `Segurança Eletrônica em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança Eletrônica', c),
     desc: c => `Segurança eletrônica em ${c}, MG. Câmeras CFTV, alarmes, controle de acesso eletrônico e monitoramento 24h. Solicite proposta.`,
     hero: c => `A Santo Onofre implementa sistemas de segurança eletrônica em <strong>${c}</strong>: câmeras CFTV de alta definição, alarmes perimetrais, controle de acesso eletrônico e central de monitoramento 24 horas para empresas e condomínios.`,
     badge: 'Segurança Eletrônica',
@@ -208,7 +224,7 @@ const servicos = [
     slug: 'instalacao-de-cameras',
     nome: 'Instalação de Câmeras de Segurança',
     h1: c => `Instalação de Câmeras de Segurança em ${c}, MG`,
-    title: c => `Instalação de Câmeras em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Instalação de Câmeras', c),
     desc: c => `Instalação de câmeras de segurança em ${c}, MG. CFTV, câmeras IP e sistemas de monitoramento para empresas e condomínios. Solicite orçamento.`,
     hero: c => `A Santo Onofre realiza instalação de câmeras de segurança em <strong>${c}</strong>: sistemas CFTV analógicos e digitais, câmeras IP de alta resolução, gravação em nuvem e acesso remoto pelo smartphone para empresas e condomínios.`,
     badge: 'Câmeras de Segurança',
@@ -221,7 +237,7 @@ const servicos = [
     slug: 'monitoramento-de-cameras',
     nome: 'Monitoramento de Câmeras',
     h1: c => `Monitoramento de Câmeras 24h em ${c}, MG`,
-    title: c => `Monitoramento de Câmeras em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Monitoramento de Câmeras', c),
     desc: c => `Monitoramento de câmeras 24h em ${c}, MG. Central de monitoramento com resposta imediata para empresas e condomínios. Solicite proposta.`,
     hero: c => `A Santo Onofre oferece monitoramento remoto de câmeras 24 horas em <strong>${c}</strong>. Nossa central acompanha as imagens em tempo real e aciona equipes de resposta imediata em caso de incidentes.`,
     badge: 'Monitoramento 24h',
@@ -234,7 +250,7 @@ const servicos = [
     slug: 'cftv',
     nome: 'CFTV',
     h1: c => `CFTV em ${c} — Sistema de Câmeras de Segurança`,
-    title: c => `CFTV em ${c} - MG | Santo Onofre Segurança`,
+    title: c => tituloSeo('CFTV', c),
     desc: c => `CFTV em ${c}, MG. Instalação e monitoramento de Circuito Fechado de TV para empresas e condomínios. Solicite orçamento.`,
     hero: c => `A Santo Onofre instala e monitora sistemas de CFTV (Circuito Fechado de Televisão) em <strong>${c}</strong>: câmeras analógicas e IP, DVR/NVR de alta capacidade, visão noturna e acesso remoto para verificação das imagens.`,
     badge: 'CFTV',
@@ -247,7 +263,7 @@ const servicos = [
     slug: 'ronda-motorizada',
     nome: 'Ronda Motorizada',
     h1: c => `Ronda Motorizada em ${c}, MG`,
-    title: c => `Ronda Motorizada em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Ronda Motorizada', c),
     desc: c => `Ronda motorizada em ${c}, MG. Patrulhamento preventivo com veículos para empresas, condomínios e comércios. Solicite proposta gratuita.`,
     hero: c => `A Santo Onofre oferece ronda motorizada em <strong>${c}</strong> — patrulhamento preventivo com veículos e vigilantes que percorrem os pontos contratados em intervalos variados, garantindo presença ostensiva e dissuasão de crimes.`,
     badge: 'Ronda Motorizada',
@@ -260,7 +276,7 @@ const servicos = [
     slug: 'vigilancia-noturna',
     nome: 'Vigilância Noturna',
     h1: c => `Vigilância Noturna em ${c}, MG`,
-    title: c => `Vigilância Noturna em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Vigilância Noturna', c),
     desc: c => `Vigilância noturna em ${c}, MG. Proteção de empresas, canteiros e condomínios durante a noite com profissionais treinados. Solicite proposta.`,
     hero: c => `A Santo Onofre oferece vigilância noturna em <strong>${c}</strong> para empresas, canteiros de obra, condomínios e comércios. Profissionais treinados em controle de acesso e orientação de público garantem proteção durante as horas de maior vulnerabilidade, com rondas e comunicação contínua.`,
     badge: 'Vigilância Noturna',
@@ -273,7 +289,7 @@ const servicos = [
     slug: 'controle-de-acesso',
     nome: 'Controle de Acesso',
     h1: c => `Controle de Acesso em ${c}, MG`,
-    title: c => `Controle de Acesso em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Controle de Acesso', c),
     desc: c => `Controle de acesso em ${c}, MG. Sistemas eletrônicos e presenciais para empresas, condomínios e indústrias. Biometria e catracas. Solicite proposta.`,
     hero: c => `A Santo Onofre implementa controle de acesso em <strong>${c}</strong>: sistemas com biometria, leitores de cartão, catracas e cancelas, integrados à vigilância presencial para gestão completa da entrada e saída de pessoas e veículos.`,
     badge: 'Controle de Acesso',
@@ -286,7 +302,7 @@ const servicos = [
     slug: 'seguranca-para-industrias',
     nome: 'Segurança para Indústrias',
     h1: c => `Segurança para Indústrias em ${c}, MG`,
-    title: c => `Segurança para Indústrias em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Indústrias', c),
     desc: c => `Segurança para indústrias em ${c}, MG. Vigilância patrimonial, controle de acesso e monitoramento 24h. Solicite proposta.`,
     hero: c => `A Santo Onofre oferece segurança especializada para indústrias em <strong>${c}</strong>: controle de acesso de funcionários e fornecedores, orientação de público no perímetro, monitoramento de pátios e proteção de equipamentos de alto valor.`,
     badge: 'Segurança Industrial',
@@ -299,7 +315,7 @@ const servicos = [
     slug: 'seguranca-para-fabricas',
     nome: 'Segurança para Fábricas',
     h1: c => `Segurança para Fábricas em ${c}, MG`,
-    title: c => `Segurança para Fábricas em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Fábricas', c),
     desc: c => `Segurança para fábricas em ${c}, MG. Proteção de instalações industriais, maquinário e estoques com vigilantes 24h. Solicite proposta.`,
     hero: c => `Para fábricas e plantas industriais em <strong>${c}</strong>, a Santo Onofre oferece segurança completa: vigilantes de perímetro, controle de acesso de funcionários e caminhões, monitoramento de estoque e proteção de maquinário.`,
     badge: 'Segurança para Fábricas',
@@ -312,7 +328,7 @@ const servicos = [
     slug: 'seguranca-para-prefeituras',
     nome: 'Segurança para Prefeituras',
     h1: c => `Segurança para Prefeituras em ${c}, MG`,
-    title: c => `Segurança para Prefeituras em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Prefeituras', c),
     desc: c => `Segurança para prefeituras e órgãos públicos em ${c}, MG. Vigilância patrimonial para prédios públicos e secretarias. Solicite proposta.`,
     hero: c => `A Santo Onofre fornece segurança para prefeituras e órgãos públicos em <strong>${c}</strong>: vigilantes para prédios da administração pública, câmaras municipais e secretarias, com controle de acesso e vigilância discreta.`,
     badge: 'Segurança Pública',
@@ -325,7 +341,7 @@ const servicos = [
     slug: 'seguranca-para-comercios',
     nome: 'Segurança para Comércios',
     h1: c => `Segurança para Comércios em ${c}, MG`,
-    title: c => `Segurança para Comércios em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Comércios', c),
     desc: c => `Segurança para comércios em ${c}, MG. Vigilantes, câmeras e prevenção de perdas para lojas e estabelecimentos. Solicite proposta.`,
     hero: c => `A Santo Onofre protege estabelecimentos comerciais em <strong>${c}</strong>: lojas, supermercados, atacados e centros comerciais, com vigilantes de prevenção de perdas, controle de acesso e monitoramento eletrônico.`,
     badge: 'Segurança Comercial',
@@ -338,7 +354,7 @@ const servicos = [
     slug: 'seguranca-para-condominio',
     nome: 'Segurança para Condomínio',
     h1: c => `Segurança para Condomínio em ${c}, MG`,
-    title: c => `Segurança para Condomínio em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Condomínio', c),
     desc: c => `Segurança para condomínios em ${c}, MG. Vigilantes, portaria profissional e monitoramento 24h. Solicite proposta gratuita.`,
     hero: c => `A Santo Onofre oferece segurança completa para condomínios em <strong>${c}</strong>: porteiros treinados, vigilantes patrimoniais, controle de acesso eletrônico e monitoramento 24 horas para tranquilidade de moradores e condôminos.`,
     badge: 'Segurança para Condomínios',
@@ -351,7 +367,7 @@ const servicos = [
     slug: 'seguranca-para-escolas',
     nome: 'Segurança para Escolas',
     h1: c => `Segurança para Escolas em ${c}, MG`,
-    title: c => `Segurança para Escolas em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Escolas', c),
     desc: c => `Segurança para escolas em ${c}, MG. Controle de acesso, vigilância discreta e proteção de alunos e funcionários. Solicite proposta.`,
     hero: c => `A Santo Onofre fornece segurança especializada para escolas e instituições de ensino em <strong>${c}</strong>: controle de acesso de alunos, responsáveis e visitantes, vigilância discreta no entorno e monitoramento eletrônico.`,
     badge: 'Segurança Escolar',
@@ -364,7 +380,7 @@ const servicos = [
     slug: 'seguranca-para-hospitais',
     nome: 'Segurança para Hospitais',
     h1: c => `Segurança para Hospitais e Clínicas em ${c}, MG`,
-    title: c => `Segurança para Hospitais em ${c} - MG | Santo Onofre`,
+    title: c => tituloSeo('Segurança para Hospitais', c),
     desc: c => `Segurança para hospitais e clínicas em ${c}, MG. Controle de acesso e vigilância 24h para ambientes de saúde. Solicite proposta.`,
     hero: c => `A Santo Onofre oferece segurança especializada para hospitais, clínicas e centros de saúde em <strong>${c}</strong>. Profissionais discretos, com controle de acesso a áreas restritas e vigilância 24 horas respeitando o ambiente de saúde.`,
     badge: 'Segurança Hospitalar',
@@ -377,10 +393,7 @@ const servicos = [
     slug: 'cameras-de-seguranca',
     nome: 'Câmeras de Segurança',
     h1: c => `Câmeras de Segurança em ${c}, MG`,
-    title: c => {
-      const full = `Câmeras de Segurança em ${c} - MG | Santo Onofre`;
-      return full.length <= 60 ? full : `Câmeras de Segurança em ${c}, MG`;
-    },
+    title: c => tituloSeo('Câmeras de Segurança', c),
     desc: c => `Câmeras de segurança em ${c} com instalação profissional. Sistemas CFTV, câmeras IP e monitoramento 24h. Santo Onofre Serviços.`,
     hero: c => `A Santo Onofre fornece e instala câmeras de segurança em <strong>${c}</strong>: sistemas CFTV analógicos e digitais, câmeras IP de alta resolução, gravação em nuvem e monitoramento remoto para empresas, condomínios e comércios.`,
     badge: 'Câmeras de Segurança',
@@ -395,10 +408,7 @@ const servicos = [
     slug: 'recepcionista',
     nome: 'Recepcionista Profissional',
     h1: c => `Recepcionista Profissional em ${c}, MG`,
-    title: c => {
-      const full = `Recepcionista em ${c} - MG | Santo Onofre Serviços`;
-      return full.length <= 60 ? full : `Recepcionista em ${c}, MG | Santo Onofre`;
-    },
+    title: c => tituloSeo('Recepcionista', c),
     desc: c => `Recepcionista profissional em ${c} para empresas e condomínios. Atendimento, triagem e controle de acesso. Santo Onofre Serviços.`,
     hero: c => `A Santo Onofre disponibiliza recepcionistas treinadas para atendimento ao público, triagem de visitantes e controle de entrada em empresas, condomínios e clínicas em <strong>${c}</strong>.`,
     badge: 'Recepcionista Profissional',
@@ -413,10 +423,7 @@ const servicos = [
     slug: 'vigia-profissional',
     nome: 'Vigia Profissional',
     h1: c => `Vigia Profissional em ${c}, MG`,
-    title: c => {
-      const full = `Vigia Profissional em ${c} - MG | Santo Onofre`;
-      return full.length <= 60 ? full : `Vigia Profissional em ${c}, MG`;
-    },
+    title: c => tituloSeo('Vigia Profissional', c),
     desc: c => `Vigia profissional em ${c} para empresas e condomínios. Observação patrimonial e controle de perímetro 24h. Santo Onofre Serviços.`,
     hero: c => `A Santo Onofre disponibiliza vigias profissionais treinados para observação patrimonial, controle de perímetro e dissuasão de ocorrências em empresas, comércios e condomínios em <strong>${c}</strong>.`,
     badge: 'Vigia Profissional',
@@ -431,10 +438,7 @@ const servicos = [
     slug: 'controlador-de-acesso',
     nome: 'Controlador de Acesso',
     h1: c => `Controlador de Acesso em ${c}, MG`,
-    title: c => {
-      const full = `Controlador de Acesso em ${c} - MG | Santo Onofre`;
-      return full.length <= 60 ? full : `Controlador de Acesso em ${c}, MG`;
-    },
+    title: c => tituloSeo('Controlador de Acesso', c),
     desc: c => `Controlador de acesso em ${c}: gestão presencial de entrada e saída para empresas e condomínios. Santo Onofre Serviços.`,
     hero: c => `A Santo Onofre fornece controladores de acesso profissionais treinados para gestão presencial de entrada e saída de pessoas e veículos em empresas, indústrias e condomínios em <strong>${c}</strong>.`,
     badge: 'Controlador de Acesso',
@@ -449,10 +453,7 @@ const servicos = [
     slug: 'porteiro',
     nome: 'Porteiro',
     h1: c => `Porteiro em ${c}, MG`,
-    title: c => {
-      const full = `Porteiro em ${c} - MG | Santo Onofre Serviços`;
-      return full.length <= 60 ? full : `Porteiro em ${c}, MG | Santo Onofre`;
-    },
+    title: c => tituloSeo('Porteiro', c),
     desc: c => `Porteiro profissional em ${c} para condomínios, prédios e empresas. Triagem e controle de acesso. Santo Onofre Serviços.`,
     hero: c => `A Santo Onofre disponibiliza porteiros profissionais para condomínios, prédios comerciais, empresas e estabelecimentos em <strong>${c}</strong>. Triagem, identificação de visitantes e controle de entrada com registro completo.`,
     badge: 'Porteiro Profissional',
