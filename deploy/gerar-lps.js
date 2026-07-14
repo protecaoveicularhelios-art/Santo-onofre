@@ -285,14 +285,15 @@ const servicosDestaque = [
   { slug: 'portaria-de-condominio', nome: 'Portaria Profissional', desc: 'Porteiros treinados para triagem, identificação e atendimento em condomínios e empresas.', icon: '<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/>' }
 ];
 
-// Garante que o <title> nunca passe de 60 caracteres (limite pratico do Google nos resultados de busca)
+// Garante <title> unico e nunca acima de 60 caracteres. Sempre comeca com "Santo Onofre" —
+// nenhum dos 33 servicos de gerar-seo-completo.js usa esse padrao, entao o titulo da
+// pagina-pilar nunca colide com o titulo de uma pagina de servico da mesma cidade.
 function tituloSeoPilar(cidade, max = 60) {
   const candidatos = [
-    `Empresa de Segurança em ${cidade} - MG | Santo Onofre Serviços`,
-    `Empresa de Segurança em ${cidade} - MG | Santo Onofre`,
-    `Empresa de Segurança em ${cidade}, MG | Santo Onofre`,
-    `Segurança Patrimonial em ${cidade} - MG`,
-    `Segurança Patrimonial em ${cidade}, MG`
+    `Santo Onofre Serviços em ${cidade}, MG | Segurança e Vigilância`,
+    `Santo Onofre em ${cidade}, MG — Segurança e Vigilância`,
+    `Santo Onofre Serviços em ${cidade}, MG`,
+    `Santo Onofre em ${cidade}, MG`
   ];
   for (const t of candidatos) if (t.length <= max) return t;
   const base = candidatos[candidatos.length - 1];
