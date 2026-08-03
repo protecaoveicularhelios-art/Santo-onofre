@@ -3,7 +3,7 @@ const path = require('path');
 
 const cidades = [
   {
-    nome: "Belo Horizonte", slug: "belo-horizonte",
+    nome: "Belo Horizonte", slug: "belo-horizonte", uf: "MG", ufNome: "Minas Gerais",
     desc: "Belo Horizonte é a capital de Minas Gerais e um dos maiores centros empresariais do Brasil, com mais de 2,7 milhões de habitantes. A alta concentração de empresas, condomínios comerciais e industriais na região Centro-Sul, Barreiro e Venda Nova torna a segurança patrimonial uma necessidade estratégica. A Santo Onofre atua em todos os bairros da capital com equipes treinadas e resposta rápida.",
     bairros: "Savassi, Lourdes, Buritis, Barreiro, Venda Nova, Pampulha, Centro, Santa Efigênia",
     faq: [
@@ -12,7 +12,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Uberlândia", slug: "uberlandia",
+    nome: "Uberlândia", slug: "uberlandia", uf: "MG", ufNome: "Minas Gerais",
     desc: "Uberlândia é o segundo maior município de Minas Gerais e o maior do Triângulo Mineiro, com forte vocação comercial e logística. O crescimento acelerado do setor atacadista, industrial e de galpões de distribuição aumenta a demanda por vigilância profissional. A Santo Onofre oferece soluções completas para empresas, depósitos e condomínios em toda a cidade.",
     bairros: "Centro, Santa Mônica, Tibery, Jardim Karaíba, Morada da Colina, Planalto, Industrial",
     faq: [
@@ -21,7 +21,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Contagem", slug: "contagem",
+    nome: "Contagem", slug: "contagem", uf: "MG", ufNome: "Minas Gerais",
     desc: "Contagem é o maior polo industrial da Região Metropolitana de Belo Horizonte, abrigando centenas de indústrias nos distritos industriais do Riacho e Nacional. A proteção de ativos industriais, controle de acesso de funcionários e monitoramento de perímetro são demandas constantes das empresas locais. A Santo Onofre atende indústrias de todos os portes em Contagem.",
     bairros: "Riacho das Pedras, Nacional, Eldorado, Cinco, Industrial Sinduscon, Ressaca",
     faq: [
@@ -30,7 +30,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Juiz de Fora", slug: "juiz-de-fora",
+    nome: "Juiz de Fora", slug: "juiz-de-fora", uf: "MG", ufNome: "Minas Gerais",
     desc: "Juiz de Fora é o principal centro da Zona da Mata Mineira, com destaque para os setores de comércio, saúde e educação. A cidade abriga grandes hospitais, shoppings e campus universitários que demandam segurança profissional e discreta. A Santo Onofre oferece vigilância especializada para o perfil comercial e institucional de Juiz de Fora.",
     bairros: "Centro, São Mateus, Cascatinha, Graminha, Alto dos Passos, Benfica, Jardim Glória",
     faq: [
@@ -39,7 +39,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Betim", slug: "betim",
+    nome: "Betim", slug: "betim", uf: "MG", ufNome: "Minas Gerais",
     desc: "Betim é um dos maiores polos industriais do Brasil, sede da Fiat Chrysler e de centenas de empresas do setor automotivo e petroquímico. A proteção de instalações industriais de grande porte, com acesso controlado 24 horas e vigilância armada, é a principal demanda das empresas betinenses. A Santo Onofre tem expertise no atendimento a indústrias de alto risco.",
     bairros: "PTB, Citrolândia, Braúnas, Centro, Imbiruçu, Jardim das Alterosas, Industrial",
     faq: [
@@ -48,7 +48,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Montes Claros", slug: "montes-claros",
+    nome: "Montes Claros", slug: "montes-claros", uf: "MG", ufNome: "Minas Gerais",
     desc: "Montes Claros é o principal centro urbano do Norte de Minas Gerais, com forte crescimento do setor de serviços, saúde e comércio atacadista. A posição estratégica como polo regional faz da cidade um ponto de convergência de negócios que exigem segurança profissional. A Santo Onofre atende empresas e condomínios em toda a extensão de Montes Claros.",
     bairros: "Centro, Ibituruna, Major Prates, Morada do Parque, Cintra, São João, Augusta Mota",
     faq: [
@@ -57,7 +57,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Ribeirão das Neves", slug: "ribeirao-das-neves",
+    nome: "Ribeirão das Neves", slug: "ribeirao-das-neves", uf: "MG", ufNome: "Minas Gerais",
     desc: "Ribeirão das Neves integra a Região Metropolitana de Belo Horizonte e tem registrado crescimento populacional e comercial expressivo nos últimos anos. O aumento de condomínios residenciais, comércios e pequenas indústrias cria demanda crescente por serviços de segurança acessíveis e eficientes. A Santo Onofre atende empresas e residências em toda Ribeirão das Neves.",
     bairros: "Centro, Justinópolis, Bairro das Neves, Veneza, Areias, Sevilha, Areias II",
     faq: [
@@ -66,7 +66,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Uberaba", slug: "uberaba",
+    nome: "Uberaba", slug: "uberaba", uf: "MG", ufNome: "Minas Gerais",
     desc: "Uberaba é polo agropecuário e biotecnológico do Triângulo Mineiro, sede de grandes empresas do setor de genética bovina e agronegócio. A crescente demanda por segurança em fazendas, centros de pesquisa, shoppings e indústrias faz de Uberaba um mercado em expansão para serviços especializados. A Santo Onofre está pronta para atender toda a região.",
     bairros: "Centro, Mercês, Abadia, Boa Vista, Fabrício, Lídice, São Benedito",
     faq: [
@@ -75,7 +75,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Governador Valadares", slug: "governador-valadares",
+    nome: "Governador Valadares", slug: "governador-valadares", uf: "MG", ufNome: "Minas Gerais",
     desc: "Governador Valadares é o principal centro comercial e de serviços do Vale do Rio Doce, concentrando atacadistas, redes de varejo e empresas de logística regional. A dinamicidade comercial da cidade exige vigilância profissional com agilidade de resposta. A Santo Onofre oferece soluções adaptadas ao perfil empresarial de Governador Valadares.",
     bairros: "Centro, Turmalina, Bom Jardim, Costa Rica, Vila Bretas, Altinópolis, Esperança",
     faq: [
@@ -84,7 +84,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Ipatinga", slug: "ipatinga",
+    nome: "Ipatinga", slug: "ipatinga", uf: "MG", ufNome: "Minas Gerais",
     desc: "Ipatinga integra o Vale do Aço e é sede de grandes usinas siderúrgicas, tornando-se um polo industrial de relevância nacional. A proteção de instalações industriais de grande porte, controle de acesso de trabalhadores e segurança de perímetro são as principais demandas locais. A Santo Onofre tem expertise em atender o perfil industrial do Vale do Aço.",
     bairros: "Centro, Horto, Cariru, Bom Retiro, Bela Vista, Vila Celeste, Castelo",
     faq: [
@@ -93,7 +93,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Sete Lagoas", slug: "sete-lagoas",
+    nome: "Sete Lagoas", slug: "sete-lagoas", uf: "MG", ufNome: "Minas Gerais",
     desc: "Sete Lagoas é um importante polo industrial e comercial da região central de Minas Gerais, com destaque para os setores metalúrgico, alimentício e de logística. A cidade registra crescimento constante de condomínios empresariais e indústrias que demandam segurança profissional. A Santo Onofre atende toda a extensão de Sete Lagoas com equipes qualificadas.",
     bairros: "Centro, Eldorado, São João, Santo Antônio, Fazenda Velha, Várzea, Jardim Arizona",
     faq: [
@@ -102,7 +102,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Divinópolis", slug: "divinopolis",
+    nome: "Divinópolis", slug: "divinopolis", uf: "MG", ufNome: "Minas Gerais",
     desc: "Divinópolis é o maior polo têxtil e de confecções de Minas Gerais, além de concentrar indústrias metalúrgicas e de alimentos. O grande volume de mercadorias circulando no setor de confecções e as instalações industriais tornam a segurança patrimonial essencial para os negócios locais. A Santo Onofre atende empresas e condomínios em toda Divinópolis.",
     bairros: "Centro, Niterói, Sidil, São José, Interlagos, Belvedere, Danilo Passos",
     faq: [
@@ -111,7 +111,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Santa Luzia", slug: "santa-luzia",
+    nome: "Santa Luzia", slug: "santa-luzia", uf: "MG", ufNome: "Minas Gerais",
     desc: "Santa Luzia integra a Região Metropolitana de Belo Horizonte e tem crescimento expressivo nos setores de comércio e serviços. A proximidade com a capital e o aumento de condomínios residenciais e empresariais elevam a demanda por serviços de segurança profissional. A Santo Onofre atende toda Santa Luzia com equipes treinadas e resposta ágil.",
     bairros: "Centro, Palmital, Salgado Filho, Jardim Alterosas, São Benedito, Nova Pampulha, Floramar",
     faq: [
@@ -120,7 +120,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Ibirité", slug: "ibirite",
+    nome: "Ibirité", slug: "ibirite", uf: "MG", ufNome: "Minas Gerais",
     desc: "Ibirité é um dos municípios da Região Metropolitana de Belo Horizonte com maior crescimento populacional recente, impulsionado pela expansão de condomínios residenciais e comércios locais. A demanda por segurança em novos empreendimentos residenciais e comerciais cresce junto com a cidade. A Santo Onofre oferece cobertura completa em Ibirité.",
     bairros: "Centro, Jardim das Oliveiras, Jardim Leblon, Milionários, São Francisco, Parque Durval",
     faq: [
@@ -129,7 +129,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Poços de Caldas", slug: "pocos-de-caldas",
+    nome: "Poços de Caldas", slug: "pocos-de-caldas", uf: "MG", ufNome: "Minas Gerais",
     desc: "Poços de Caldas é um importante polo turístico e comercial do Sul de Minas Gerais, com forte presença do setor de hotelaria, eventos e comércio de luxo. A segurança em hotéis, centros de convenções, clínicas e shoppings é uma necessidade permanente nessa cidade. A Santo Onofre oferece serviços especializados para o perfil de Poços de Caldas.",
     bairros: "Centro, Jardim Quisisana, Alto da Bela Vista, Cascata, São Sebastião, Jardim Esperança",
     faq: [
@@ -138,7 +138,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Patos de Minas", slug: "patos-de-minas",
+    nome: "Patos de Minas", slug: "patos-de-minas", uf: "MG", ufNome: "Minas Gerais",
     desc: "Patos de Minas é polo agroindustrial do Alto Paranaíba, com destaque para o processamento de grãos, frigoríficos e cooperativas agropecuárias. A movimentação de mercadorias de alto valor no setor agroindustrial exige vigilância especializada com controle rigoroso de acesso. A Santo Onofre oferece segurança adaptada às necessidades do setor produtivo de Patos de Minas.",
     bairros: "Centro, Alvorada, Nações, Padre Cícero, Santa Terezinha, Jardim Esperança, Industrial",
     faq: [
@@ -147,7 +147,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Pouso Alegre", slug: "pouso-alegre",
+    nome: "Pouso Alegre", slug: "pouso-alegre", uf: "MG", ufNome: "Minas Gerais",
     desc: "Pouso Alegre é um polo industrial e de serviços do Sul de Minas Gerais, com crescimento expressivo do setor de indústrias farmacêuticas, metalúrgicas e de logística. A posição estratégica às margens da Fernão Dias faz da cidade um hub logístico que demanda segurança profissional. A Santo Onofre atende empresas de todos os setores em Pouso Alegre.",
     bairros: "Centro, Miriam, Fátima, Jardim das Nações, Bela Vista, Alto da Boa Vista, Industrial",
     faq: [
@@ -156,7 +156,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Teófilo Otoni", slug: "teofilo-otoni",
+    nome: "Teófilo Otoni", slug: "teofilo-otoni", uf: "MG", ufNome: "Minas Gerais",
     desc: "Teófilo Otoni é o principal centro comercial do Vale do Mucuri e referência nacional no comércio de gemas e pedras preciosas. O alto valor das mercadorias comercializadas e a movimentação de joalheiros e compradores internacionais tornam a segurança patrimonial uma exigência do setor. A Santo Onofre oferece segurança especializada para esse mercado único.",
     bairros: "Centro, Fátima, Minas Brasil, Santa Rita, Palmeiras, Ipiranga, Vila Cel. Oliveira",
     faq: [
@@ -165,7 +165,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Barbacena", slug: "barbacena",
+    nome: "Barbacena", slug: "barbacena", uf: "MG", ufNome: "Minas Gerais",
     desc: "Barbacena é conhecida como a cidade das rosas e é polo regional do Campo das Vertentes, com destaque para os setores de saúde, educação e floricultura. A presença de grandes hospitais psiquiátricos, faculdades e centros de distribuição de flores cria demandas específicas de segurança. A Santo Onofre oferece soluções adaptadas ao perfil de Barbacena.",
     bairros: "Centro, São Sebastião, Mangabeiras, Frei Orlando, Industrial, Jardim Marajá, Boa Vista",
     faq: [
@@ -174,7 +174,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Sabará", slug: "sabara",
+    nome: "Sabará", slug: "sabara", uf: "MG", ufNome: "Minas Gerais",
     desc: "Sabará é um município histórico da Região Metropolitana de BH, com patrimônio arquitetônico barroco e crescente desenvolvimento industrial e residencial. A proteção de patrimônio histórico, instalações industriais e condomínios que integram a cidade ao eixo metropolitano são as principais demandas de segurança local. A Santo Onofre atende toda Sabará.",
     bairros: "Centro Histórico, Carmo do Cajuru, Ravena, Mestre Caetano, Nova Lima, Roças Novas",
     faq: [
@@ -183,7 +183,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Varginha", slug: "varginha",
+    nome: "Varginha", slug: "varginha", uf: "MG", ufNome: "Minas Gerais",
     desc: "Varginha é a capital do café e polo regional do Sul de Minas Gerais, com forte presença de tradings, torrefadoras e empresas do agronegócio cafeeiro. O alto valor das operações comerciais ligadas ao café e a presença de grandes armazéns e silos elevam a demanda por vigilância patrimonial. A Santo Onofre atende o setor produtivo e o comércio de Varginha.",
     bairros: "Centro, Jardim Andere, São Geraldo, Santa Luzia, Cândido Rodrigues, Industrial, Nova Varginha",
     faq: [
@@ -192,7 +192,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Conselheiro Lafaiete", slug: "conselheiro-lafaiete",
+    nome: "Conselheiro Lafaiete", slug: "conselheiro-lafaiete", uf: "MG", ufNome: "Minas Gerais",
     desc: "Conselheiro Lafaiete está no coração do Quadrilátero Ferrífero e é polo de mineração e siderurgia, com forte presença de mineradoras e empresas de beneficiamento de minério. A segurança de instalações de alto valor, equipamentos pesados e acesso de fornecedores é prioridade para as empresas locais. A Santo Onofre tem expertise para atender esse setor.",
     bairros: "Centro, Cachoeirinha, Industrial, Jardim Europa, São Joaquim, Belo Vale, Lavapés",
     faq: [
@@ -201,7 +201,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Viçosa", slug: "vicosa",
+    nome: "Viçosa", slug: "vicosa", uf: "MG", ufNome: "Minas Gerais",
     desc: "Viçosa é um polo universitário da Zona da Mata Mineira, sede da renomada Universidade Federal de Viçosa (UFV) e de dezenas de empresas de agropecuária e tecnologia. O fluxo intenso de estudantes, pesquisadores e visitantes cria demandas específicas de segurança para o setor educacional e empresarial. A Santo Onofre oferece serviços adaptados ao perfil de Viçosa.",
     bairros: "Centro, Silvestre, Nova Viçosa, Ramos, Centro Universitário, Passos, Santo Antônio",
     faq: [
@@ -210,7 +210,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Itabira", slug: "itabira",
+    nome: "Itabira", slug: "itabira", uf: "MG", ufNome: "Minas Gerais",
     desc: "Itabira é berço da mineração de ferro no Brasil e sede histórica da Vale, uma das maiores mineradoras do mundo. A presença de operações mineiras de grande escala, além de comércio e serviços desenvolvidos para atender os trabalhadores do setor, cria demanda constante por segurança patrimonial. A Santo Onofre atende empresas e condomínios em toda Itabira.",
     bairros: "Centro, Melo Viana, Nova Itabira, Cubas, Bom Jesus, Ventura, Industrial",
     faq: [
@@ -219,7 +219,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Itaúna", slug: "itauna",
+    nome: "Itaúna", slug: "itauna", uf: "MG", ufNome: "Minas Gerais",
     desc: "Itaúna é um município dinâmico do Centro-Oeste Mineiro, com destaque para o setor têxtil, metalúrgico e de bebidas. A variedade do parque industrial local exige soluções de segurança flexíveis e adaptadas a diferentes tipos de operação. A Santo Onofre atende indústrias, comércios e condomínios em toda Itaúna.",
     bairros: "Centro, Lagoa dos Patos, Novo Horizonte, São Geraldo, Industrial, Bom Jesus, Esplanada",
     faq: [
@@ -228,7 +228,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Coronel Fabriciano", slug: "coronel-fabriciano",
+    nome: "Coronel Fabriciano", slug: "coronel-fabriciano", uf: "MG", ufNome: "Minas Gerais",
     desc: "Coronel Fabriciano integra o Vale do Aço junto com Ipatinga e Timóteo, formando um dos maiores polos industriais de Minas Gerais. A concentração de siderúrgicas, metalúrgicas e empresas de logística industrial na região cria alta demanda por segurança profissional. A Santo Onofre oferece cobertura completa no Vale do Aço.",
     bairros: "Centro, Caladinho, Amaro Lanari, Olaria, Construção, Industrial, Girassóis",
     faq: [
@@ -237,7 +237,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Muriaé", slug: "muriae",
+    nome: "Muriaé", slug: "muriae", uf: "MG", ufNome: "Minas Gerais",
     desc: "Muriaé é polo regional da Zona da Mata Mineira, com destaque para os setores de confecções, comércio atacadista e serviços de saúde. O dinamismo comercial e o crescimento de novos bairros residenciais aumentam a demanda por segurança patrimonial. A Santo Onofre oferece serviços completos para empresas e condomínios de Muriaé.",
     bairros: "Centro, Aeroporto, São Cristóvão, São Judas Tadeu, Industrial, Bom Pastor, Santa Terezinha",
     faq: [
@@ -246,7 +246,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Araguari", slug: "araguari",
+    nome: "Araguari", slug: "araguari", uf: "MG", ufNome: "Minas Gerais",
     desc: "Araguari é polo agroindustrial do Triângulo Mineiro, com forte presença de cooperativas, cerealistas e empresas do setor de café e soja. A movimentação de grandes volumes de produtos agrícolas e a expansão do setor logístico elevam a demanda por vigilância profissional. A Santo Onofre atende o setor produtivo e o comércio de Araguari.",
     bairros: "Centro, Independência, Tabajaras, Santa Luzia, Dona Amélia, Industrial, Bom Jesus",
     faq: [
@@ -255,7 +255,7 @@ const cidades = [
     ]
   },
   {
-    nome: "Ubá", slug: "uba",
+    nome: "Ubá", slug: "uba", uf: "MG", ufNome: "Minas Gerais",
     desc: "Ubá é a capital moveleira de Minas Gerais e um dos maiores polos do setor de móveis do Brasil, com centenas de fábricas e empresas do segmento. A proteção de ativos industriais, estoques de alto valor e controle de acesso nas fábricas são demandas prioritárias do setor moveleiro. A Santo Onofre oferece soluções especializadas para o polo de Ubá.",
     bairros: "Centro, São Sebastião, Industrial, Universitário, Boa Vista, Santa Luzia, Aeroporto",
     faq: [
@@ -264,12 +264,174 @@ const cidades = [
     ]
   },
   {
-    nome: "Lavras", slug: "lavras",
+    nome: "Lavras", slug: "lavras", uf: "MG", ufNome: "Minas Gerais",
     desc: "Lavras é polo universitário e agroindustrial do Sul de Minas, sede da Universidade Federal de Lavras (UFLA) e de empresas do setor de sementes, agroquímicos e agroindústria. O ambiente universitário e a presença de centros de pesquisa de alto valor criam demandas específicas de segurança. A Santo Onofre atende o setor acadêmico e produtivo de Lavras.",
     bairros: "Centro, Primavera, Jardim Glória, Nossa Senhora de Lourdes, Industrial, São Vicente, Aeroporto",
     faq: [
       { p: "A Santo Onofre atende empresas do setor de sementes e agroquímicos em Lavras?", r: "Sim. Oferecemos segurança para laboratórios, armazéns e centros de pesquisa do setor agrícola, com controle de acesso e monitoramento de ativos." },
       { p: "Vocês fazem segurança para empresas que prestam serviço à UFLA em Lavras?", r: "Sim, atendemos empresas parceiras e prestadoras de serviço do entorno universitário com soluções adequadas ao perfil acadêmico." }
+    ]
+  },
+  {
+    nome: "São Paulo", slug: "sao-paulo", uf: "SP", ufNome: "São Paulo",
+    desc: "São Paulo é a maior cidade do Brasil e o principal centro financeiro e corporativo da América Latina, com mais de 11 milhões de habitantes. A altíssima concentração de sedes empresariais, condomínios comerciais e residenciais de alto padrão torna a segurança patrimonial e o controle de acesso uma necessidade estratégica para negócios de todos os portes. A Santo Onofre atua nas principais regiões da capital paulista com equipes treinadas e resposta ágil.",
+    bairros: "Avenida Paulista, Itaim Bibi, Vila Olímpia, Moema, Pinheiros, Santana, Tatuapé, Santo Amaro",
+    faq: [
+      { p: "A Santo Onofre atende empresas e condomínios em toda São Paulo capital?", r: "Sim. Atuamos nas principais regiões da capital, com foco em condomínios comerciais, torres corporativas e condomínios residenciais de médio e alto padrão." },
+      { p: "Qual o prazo para início do serviço em São Paulo?", r: "Após a assinatura do contrato, conseguimos iniciar em até 5 dias úteis na capital, dependendo do porte da operação." }
+    ]
+  },
+  {
+    nome: "Guarulhos", slug: "guarulhos", uf: "SP", ufNome: "São Paulo",
+    desc: "Guarulhos é o segundo maior município do estado de São Paulo e sede do maior aeroporto internacional do Brasil, o que faz da cidade um polo logístico e industrial de relevância nacional. A alta concentração de galpões, centros de distribuição e empresas ligadas ao comércio exterior eleva a demanda por controle de acesso e vigilância patrimonial. A Santo Onofre atende empresas e condomínios em toda a extensão de Guarulhos.",
+    bairros: "Centro, Cumbica, Vila Galvão, Bonsucesso, Cidade Soberana, Pimentas, Água Chata",
+    faq: [
+      { p: "Vocês atendem galpões e centros de distribuição próximos ao aeroporto em Guarulhos?", r: "Sim. Temos experiência em segurança para operações logísticas e de comércio exterior, com controle de acesso de veículos e monitoramento de cargas." },
+      { p: "A Santo Onofre atende condomínios residenciais em Guarulhos?", r: "Sim, atendemos condomínios verticais e horizontais em toda a cidade, com porteiros, vigilantes e controle de acesso eletrônico." }
+    ]
+  },
+  {
+    nome: "Santo André", slug: "santo-andre", uf: "SP", ufNome: "São Paulo",
+    desc: "Santo André é um dos municípios centrais do ABC Paulista, região historicamente ligada à indústria automotiva e metalúrgica brasileira. A combinação de parques industriais consolidados com um centro comercial denso e condomínios residenciais cria demanda constante por segurança patrimonial profissional. A Santo Onofre atende empresas e condomínios em toda Santo André.",
+    bairros: "Centro, Vila Assunção, Jardim, Bairro Casa Branca, Utinga, Vila Guiomar, Paraíso",
+    faq: [
+      { p: "Vocês atendem empresas do setor industrial do ABC em Santo André?", r: "Sim. Temos experiência em segurança para plantas industriais e metalúrgicas, com controle de acesso de fornecedores e vigilância de perímetro." },
+      { p: "A Santo Onofre atende condomínios comerciais no centro de Santo André?", r: "Sim, atendemos edifícios comerciais e condomínios residenciais no centro e nos principais bairros da cidade." }
+    ]
+  },
+  {
+    nome: "São Bernardo do Campo", slug: "sao-bernardo-do-campo", uf: "SP", ufNome: "São Paulo",
+    desc: "São Bernardo do Campo é o coração industrial do ABC Paulista, sede histórica de grandes montadoras e fornecedores do setor automotivo. A presença de plantas industriais de grande porte, com acesso controlado 24 horas e vigilância de perímetro, é a principal demanda das empresas locais. A Santo Onofre tem expertise no atendimento a indústrias de alto padrão de segurança.",
+    bairros: "Centro, Rudge Ramos, Baeta Neves, Anchieta, Assunção, Demarchi, Jardim do Mar",
+    faq: [
+      { p: "A Santo Onofre atende empresas do setor automotivo em São Bernardo do Campo?", r: "Sim. Temos protocolos específicos para o setor automotivo, incluindo controle de acesso de fornecedores, vigilância de pátios e monitoramento de ativos." },
+      { p: "É possível fazer segurança em turnos noturnos nas fábricas de SBC?", r: "Sim, oferecemos cobertura ininterrupta com vigilantes treinados para operação noturna, rondas e comunicação com central de monitoramento." }
+    ]
+  },
+  {
+    nome: "Osasco", slug: "osasco", uf: "SP", ufNome: "São Paulo",
+    desc: "Osasco é um dos principais polos financeiros e comerciais da Grande São Paulo, com forte presença de agências bancárias, torres corporativas e grandes centros comerciais. O intenso fluxo de pessoas em edifícios corporativos e shoppings exige controle de acesso rigoroso e orientação de público qualificada. A Santo Onofre atende empresas e condomínios em toda Osasco.",
+    bairros: "Centro, Presidente Altino, Vila Yara, Km 18, Jardim Piratininga, Bela Vista, Rochdale",
+    faq: [
+      { p: "Vocês atendem torres corporativas e agências bancárias em Osasco?", r: "Sim. Temos experiência em segurança para edifícios corporativos e agências, com controle de acesso rigoroso e orientação de público." },
+      { p: "A Santo Onofre atende condomínios residenciais em Osasco?", r: "Sim, atendemos condomínios de todos os portes com portaria profissional e vigilância patrimonial." }
+    ]
+  },
+  {
+    nome: "Diadema", slug: "diadema", uf: "SP", ufNome: "São Paulo",
+    desc: "Diadema integra o ABC Paulista e é conhecida por concentrar um dos maiores polos farmoquímicos e industriais do país, além de forte presença de pequenas e médias indústrias. A alta densidade de galpões e empresas exige vigilância patrimonial e controle de acesso rigoroso para proteção de ativos e insumos. A Santo Onofre atende o parque industrial de Diadema com equipes especializadas.",
+    bairros: "Centro, Piraporinha, Eldorado, Vila Nogueira, Campanário, Serraria, Inamar",
+    faq: [
+      { p: "A Santo Onofre atende indústrias químicas e farmacêuticas em Diadema?", r: "Sim. Temos protocolos de controle de acesso e vigilância adaptados aos riscos específicos de plantas químicas e farmacêuticas." },
+      { p: "Vocês fazem segurança para pequenas indústrias em Diadema?", r: "Sim, atendemos empresas de todos os portes, com planos de vigilância fixa ou rondas programadas conforme a necessidade." }
+    ]
+  },
+  {
+    nome: "Barueri", slug: "barueri", uf: "SP", ufNome: "São Paulo",
+    desc: "Barueri é um dos municípios mais dinâmicos da região oeste da Grande São Paulo, sede de Alphaville e de um dos maiores polos corporativos fora da capital. A concentração de sedes de empresas, condomínios residenciais de alto padrão e centros empresariais eleva a exigência por segurança patrimonial de alto nível. A Santo Onofre atende empresas e condomínios em toda Barueri.",
+    bairros: "Alphaville, Centro, Jardim Silveira, Aldeia da Serra, Tamboré, Jardim Belval",
+    faq: [
+      { p: "A Santo Onofre atende condomínios de alto padrão em Alphaville e Barueri?", r: "Sim. Temos experiência em segurança para condomínios residenciais e comerciais de alto padrão, com portaria discreta e protocolos rigorosos." },
+      { p: "Vocês atendem sedes corporativas em Barueri?", r: "Sim, oferecemos controle de acesso e vigilância para torres corporativas e centros empresariais da região." }
+    ]
+  },
+  {
+    nome: "Mogi das Cruzes", slug: "mogi-das-cruzes", uf: "SP", ufNome: "São Paulo",
+    desc: "Mogi das Cruzes é o principal polo comercial e agroindustrial do Alto Tietê, na região leste da Grande São Paulo, com forte presença de horticultura, comércio atacadista e indústrias. O crescimento constante de condomínios e empresas na região eleva a demanda por segurança patrimonial profissional. A Santo Onofre atende empresas e condomínios em toda Mogi das Cruzes.",
+    bairros: "Centro, Vila Oliveira, Braz Cubas, Jundiapeba, Cezar de Souza, Vila Nova União",
+    faq: [
+      { p: "Vocês atendem empresas do agronegócio e centrais de abastecimento em Mogi das Cruzes?", r: "Sim. Temos experiência em segurança para centrais de abastecimento, entrepostos e propriedades rurais próximas à cidade." },
+      { p: "A Santo Onofre atende condomínios residenciais em Mogi das Cruzes?", r: "Sim, atendemos condomínios verticais e horizontais com porteiros, vigilantes e controle de acesso eletrônico." }
+    ]
+  },
+  {
+    nome: "Suzano", slug: "suzano", uf: "SP", ufNome: "São Paulo",
+    desc: "Suzano é um importante polo industrial do Alto Tietê, reconhecido nacionalmente pelo setor de papel e celulose, além de concentrar comércio e condomínios em expansão. A presença de grandes plantas industriais e a movimentação constante de cargas exigem vigilância de perímetro e controle de acesso rigoroso. A Santo Onofre atende empresas e condomínios em toda Suzano.",
+    bairros: "Centro, Cidade Miguel Badra, Jardim Revista, Palmeiras, Jardim Imperial, Vila Amorim",
+    faq: [
+      { p: "A Santo Onofre atende indústrias de papel e celulose em Suzano?", r: "Sim. Temos experiência em segurança industrial de grande porte, com controle de acesso de caminhões e vigilância de perímetro." },
+      { p: "Vocês atendem condomínios comerciais em Suzano?", r: "Sim, oferecemos portaria profissional e vigilância patrimonial para condomínios comerciais e residenciais da cidade." }
+    ]
+  },
+  {
+    nome: "Itaquaquecetuba", slug: "itaquaquecetuba", uf: "SP", ufNome: "São Paulo",
+    desc: "Itaquaquecetuba é um dos municípios de maior crescimento populacional e comercial do Alto Tietê, na região leste da Grande São Paulo. A expansão acelerada de comércios, pequenas indústrias e condomínios residenciais aumenta a demanda por serviços de segurança acessíveis e eficientes. A Santo Onofre atende empresas e residências em toda Itaquaquecetuba.",
+    bairros: "Centro, Cidade Kemel, Jardim Textil, Vila Vitória, Jardim Nossa Senhora Auxiliadora",
+    faq: [
+      { p: "Vocês atendem pequenas empresas e comércios em Itaquaquecetuba?", r: "Sim. Oferecemos planos acessíveis para pequenos e médios estabelecimentos, com vigilante fixo ou rondas programadas." },
+      { p: "A Santo Onofre faz rondas noturnas em Itaquaquecetuba?", r: "Sim, oferecemos rondas ostensivas em horários programados para negócios e condomínios que precisam de cobertura sem vigilante fixo." }
+    ]
+  },
+  {
+    nome: "São José dos Campos", slug: "sao-jose-dos-campos", uf: "SP", ufNome: "São Paulo",
+    desc: "São José dos Campos é a maior cidade do Vale do Paraíba e um dos principais polos tecnológicos e aeroespaciais do Brasil, sede de grandes empresas de engenharia e de institutos de pesquisa. A presença de instalações de alta tecnologia e parques industriais de grande porte exige segurança patrimonial especializada e controle de acesso rigoroso. A Santo Onofre atende empresas e condomínios em toda São José dos Campos.",
+    bairros: "Centro, Jardim Aquarius, Urbanova, Vila Adyana, Jardim Satélite, Putim, Eugênio de Melo",
+    faq: [
+      { p: "A Santo Onofre atende empresas do setor aeroespacial e de tecnologia em São José dos Campos?", r: "Sim. Temos experiência em segurança para instalações industriais e tecnológicas de alta complexidade, com controle de acesso rigoroso." },
+      { p: "Vocês atendem condomínios residenciais em São José dos Campos?", r: "Sim, atendemos condomínios de todos os portes com portaria profissional, vigilância patrimonial e controle de acesso eletrônico." }
+    ]
+  },
+  {
+    nome: "Taubaté", slug: "taubate", uf: "SP", ufNome: "São Paulo",
+    desc: "Taubaté é um dos principais polos industriais do Vale do Paraíba, com forte presença do setor automotivo e de autopeças, além de comércio e condomínios em expansão. A proteção de instalações industriais de grande porte e o controle de acesso de fornecedores são demandas prioritárias das empresas locais. A Santo Onofre atende empresas e condomínios em toda Taubaté.",
+    bairros: "Centro, Jardim das Nações, Independência, Vila São José, Estação, Jardim Maria Augusta",
+    faq: [
+      { p: "A Santo Onofre atende empresas do setor automotivo em Taubaté?", r: "Sim. Temos protocolos específicos para indústrias automotivas e de autopeças, com vigilância de perímetro e controle de acesso." },
+      { p: "Vocês atendem condomínios residenciais em Taubaté?", r: "Sim, oferecemos portaria profissional e vigilância patrimonial para condomínios de todos os portes em Taubaté." }
+    ]
+  },
+  {
+    nome: "Jacareí", slug: "jacarei", uf: "SP", ufNome: "São Paulo",
+    desc: "Jacareí é um importante polo logístico e industrial do Vale do Paraíba, estrategicamente localizado às margens da Rodovia Presidente Dutra. A alta concentração de galpões, centros de distribuição e indústrias exige vigilância de perímetro e controle de acesso de veículos de carga. A Santo Onofre atende empresas e condomínios em toda Jacareí.",
+    bairros: "Centro, Jardim Flórida, Parque Meia Lua, Jardim Santa Maria, Vila Branca, Parque Vila Nova",
+    faq: [
+      { p: "Vocês atendem centros de distribuição às margens da Dutra em Jacareí?", r: "Sim. Temos experiência em segurança para galpões logísticos, com controle de acesso de caminhões e monitoramento de cargas." },
+      { p: "A Santo Onofre atende condomínios residenciais em Jacareí?", r: "Sim, atendemos condomínios verticais e horizontais com porteiros e vigilância patrimonial." }
+    ]
+  },
+  {
+    nome: "Pindamonhangaba", slug: "pindamonhangaba", uf: "SP", ufNome: "São Paulo",
+    desc: "Pindamonhangaba é um polo industrial em crescimento do Vale do Paraíba, com presença consolidada nos setores automotivo, aeroespacial e metalúrgico. A expansão de indústrias e condomínios na cidade eleva a demanda por segurança patrimonial profissional. A Santo Onofre atende empresas e condomínios em toda Pindamonhangaba.",
+    bairros: "Centro, Alto do Cardoso, Cidade Nova, Bosque, Feital, Araretama",
+    faq: [
+      { p: "A Santo Onofre atende indústrias automotivas e aeroespaciais em Pindamonhangaba?", r: "Sim. Temos experiência em segurança industrial para os setores automotivo e aeroespacial, com controle de acesso rigoroso." },
+      { p: "Vocês atendem condomínios residenciais em Pindamonhangaba?", r: "Sim, oferecemos portaria profissional e vigilância patrimonial para condomínios da cidade." }
+    ]
+  },
+  {
+    nome: "Guaratinguetá", slug: "guaratingueta", uf: "SP", ufNome: "São Paulo",
+    desc: "Guaratinguetá é um polo industrial e comercial do Vale do Paraíba, com presença de indústrias aeroespaciais e metalúrgicas, além de intenso fluxo de visitantes ligado ao turismo religioso da região. A diversidade de operações locais exige soluções de segurança flexíveis e adaptadas. A Santo Onofre atende empresas, comércios e condomínios em toda Guaratinguetá.",
+    bairros: "Centro, Pedregulho, Jardim Aeroporto, Chácara das Rosas, Vila São Benedito",
+    faq: [
+      { p: "A Santo Onofre atende indústrias e fornecedores do setor aeroespacial em Guaratinguetá?", r: "Sim. Temos experiência em segurança para plantas industriais e fornecedores do setor aeroespacial da região." },
+      { p: "Vocês atendem comércios e estabelecimentos no centro de Guaratinguetá?", r: "Sim, atendemos estabelecimentos comerciais de todos os portes com vigilantes fixos e monitoramento por câmeras." }
+    ]
+  },
+  {
+    nome: "Caraguatatuba", slug: "caraguatatuba", uf: "SP", ufNome: "São Paulo",
+    desc: "Caraguatatuba é o principal centro urbano do Litoral Norte de São Paulo, com forte sazonalidade turística e crescente presença de condomínios residenciais e comerciais. O aumento expressivo da população flutuante em temporada de verão exige segurança patrimonial reforçada e controle de acesso eficiente. A Santo Onofre atende empresas e condomínios em toda Caraguatatuba.",
+    bairros: "Centro, Indaiá, Martim de Sá, Jardim Primavera, Porto Novo, Sumaré",
+    faq: [
+      { p: "A Santo Onofre atende condomínios de temporada em Caraguatatuba?", r: "Sim. Temos experiência em segurança para condomínios residenciais com alta variação sazonal de ocupação, comum no Litoral Norte." },
+      { p: "Vocês reforçam a equipe em períodos de alta temporada em Caraguatatuba?", r: "Sim, dimensionamos a equipe conforme a sazonalidade, com reforço de vigilantes e porteiros nos períodos de maior movimento." }
+    ]
+  },
+  {
+    nome: "São Sebastião", slug: "sao-sebastiao", uf: "SP", ufNome: "São Paulo",
+    desc: "São Sebastião é um município estratégico do Litoral Norte de São Paulo, sede de um dos maiores terminais portuários e petrolíferos do país, além de forte vocação turística. A combinação de instalações industriais de alto valor com condomínios residenciais e comerciais exige segurança patrimonial especializada. A Santo Onofre atende empresas e condomínios em toda São Sebastião.",
+    bairros: "Centro, Topolândia, Maresias, Boiçucanga, Juquehy, Barequeçaba",
+    faq: [
+      { p: "A Santo Onofre atende empresas ligadas ao setor portuário em São Sebastião?", r: "Sim. Temos experiência em segurança de perímetro e controle de acesso para operações próximas a instalações portuárias e industriais." },
+      { p: "Vocês atendem condomínios nas praias de São Sebastião, como Maresias e Boiçucanga?", r: "Sim, atendemos condomínios residenciais em toda a orla de São Sebastião, com portaria e vigilância adaptadas à sazonalidade." }
+    ]
+  },
+  {
+    nome: "Cruzeiro", slug: "cruzeiro", uf: "SP", ufNome: "São Paulo",
+    desc: "Cruzeiro é um polo industrial do Vale do Paraíba próximo à divisa com o Rio de Janeiro, com presença de indústrias metalúrgicas e de autopeças. O crescimento comercial e industrial da região eleva a demanda por segurança patrimonial profissional. A Santo Onofre atende empresas e condomínios em toda Cruzeiro.",
+    bairros: "Centro, Vila Espanha, Jardim Esperança, Vila São José, Cidade Nova",
+    faq: [
+      { p: "A Santo Onofre atende indústrias metalúrgicas e de autopeças em Cruzeiro?", r: "Sim. Temos experiência em segurança industrial para o setor metalúrgico e de autopeças, com vigilância de perímetro e controle de acesso." },
+      { p: "Vocês atendem condomínios residenciais em Cruzeiro?", r: "Sim, oferecemos portaria profissional e vigilância patrimonial para condomínios da cidade." }
     ]
   }
 ];
@@ -288,12 +450,12 @@ const servicosDestaque = [
 // Garante <title> unico e nunca acima de 60 caracteres. Sempre comeca com "Santo Onofre" —
 // nenhum dos 33 servicos de gerar-seo-completo.js usa esse padrao, entao o titulo da
 // pagina-pilar nunca colide com o titulo de uma pagina de servico da mesma cidade.
-function tituloSeoPilar(cidade, max = 60) {
+function tituloSeoPilar(cidade, uf, max = 60) {
   const candidatos = [
-    `Santo Onofre Serviços em ${cidade}, MG | Segurança e Vigilância`,
-    `Santo Onofre em ${cidade}, MG — Segurança e Vigilância`,
-    `Santo Onofre Serviços em ${cidade}, MG`,
-    `Santo Onofre em ${cidade}, MG`
+    `Santo Onofre Serviços em ${cidade}, ${uf} | Segurança e Vigilância`,
+    `Santo Onofre em ${cidade}, ${uf} — Segurança e Vigilância`,
+    `Santo Onofre Serviços em ${cidade}, ${uf}`,
+    `Santo Onofre em ${cidade}, ${uf}`
   ];
   for (const t of candidatos) if (t.length <= max) return t;
   const base = candidatos[candidatos.length - 1];
@@ -302,7 +464,10 @@ function tituloSeoPilar(cidade, max = 60) {
 }
 
 function gerarPagina(c) {
-  const { nome, slug, desc, bairros, faq } = c;
+  const { nome, slug, uf, ufNome, desc, bairros, faq } = c;
+  // Cidades da mesma UF que também têm página-pilar, para a seção de Abrangência (nunca mistura estado)
+  const cidadesMesmoEstado = cidades.filter(x => x.uf === uf && x.slug !== slug);
+  const cidadesDestaque = cidadesMesmoEstado.slice(0, 15);
   const faqHtml = faq.map(f => `
 <div class="faq-item">
   <h3 class="faq-q">${f.p}</h3>
@@ -315,12 +480,12 @@ function gerarPagina(c) {
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-<meta name="description" content="Empresa de segurança patrimonial em ${nome}, MG. Vigilância, controle de acesso, monitoramento eletrônico e rondas ostensivas. Solicite proposta agora."/>
-<title>${tituloSeoPilar(nome)}</title>
+<meta name="description" content="Empresa de segurança patrimonial em ${nome}, ${uf}. Vigilância, controle de acesso, monitoramento eletrônico e rondas ostensivas. Solicite proposta agora."/>
+<title>${tituloSeoPilar(nome, uf)}</title>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://santoonofrevigilancia.com.br/seguranca-${slug}/"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Santo Onofre Serviços","description":"Empresa de segurança patrimonial em ${nome}, MG","url":"https://santoonofrevigilancia.com.br","telephone":"+5531987299396","areaServed":"${nome}, Minas Gerais","serviceType":"Segurança Patrimonial","address":{"@type":"PostalAddress","addressLocality":"${nome}","addressRegion":"MG","addressCountry":"BR"}}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Santo Onofre Serviços","description":"Empresa de segurança patrimonial em ${nome}, ${uf}","url":"https://santoonofrevigilancia.com.br","telephone":"+5531987299396","areaServed":"${nome}, ${ufNome}","serviceType":"Segurança Patrimonial","address":{"@type":"PostalAddress","addressLocality":"${nome}","addressRegion":"${uf}","addressCountry":"BR"}}
 <\/script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0B1829;overflow-x:hidden;}
@@ -425,9 +590,9 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6
 <section class="lp-hero">
 <div class="lp-hero-wrap">
 <div class="breadcrumb"><a href="/">Início</a><span>›</span><span style="color:rgba(255,255,255,.5)">Segurança em ${nome}</span></div>
-<div class="lp-tag">Atendemos ${nome} - MG</div>
-<h1>Empresa de Segurança<br>em <span>${nome}</span>, MG</h1>
-<p>A Santo Onofre Serviços oferece vigilância patrimonial, controle de acesso, monitoramento eletrônico e segurança para eventos em <strong>${nome}</strong> e região. Mais de 10 anos protegendo empresas, condomínios e indústrias em Minas Gerais.</p>
+<div class="lp-tag">Atendemos ${nome} - ${uf}</div>
+<h1>Empresa de Segurança<br>em <span>${nome}</span>, ${uf}</h1>
+<p>A Santo Onofre Serviços oferece vigilância patrimonial, controle de acesso, monitoramento eletrônico e segurança para eventos em <strong>${nome}</strong> e região. Mais de 10 anos protegendo empresas, condomínios e indústrias em ${ufNome}.</p>
 <div class="hero-btns">
 <a href="/contato.html" class="btn-gold">Solicitar proposta em ${nome} <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 <a href="https://wa.me/5531987299396" target="_blank" class="btn-ghost">WhatsApp</a>
@@ -443,7 +608,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.06);padding:48px 6
 <section class="local-sec">
 <div class="wrap">
 <span class="stag">Nossa presença em ${nome}</span>
-<h2>Segurança Patrimonial em ${nome}, MG</h2>
+<h2>Segurança Patrimonial em ${nome}, ${uf}</h2>
 <div class="gold-line"></div>
 <div class="local-box">
 <p>${desc}</p>
@@ -458,7 +623,7 @@ ${bairros.split(', ').map(b => `<span class="bairro-tag">${b}</span>`).join('')}
 <section class="sec sec-light">
 <div class="wrap">
 <span class="stag">Nossos serviços em ${nome}</span>
-<h2>Segurança Completa para Empresas em ${nome}, MG</h2>
+<h2>Segurança Completa para Empresas em ${nome}, ${uf}</h2>
 <p class="sec-sub">Soluções personalizadas de segurança patrimonial para negócios de todos os portes em <strong>${nome}</strong> e cidades da região.</p>
 <div class="gold-line"></div>
 <div class="srv-grid">
@@ -479,10 +644,10 @@ ${faqHtml}
 <section class="sec sec-dark">
 <div class="wrap">
 <span class="stag">Por que a Santo Onofre?</span>
-<h2>Referência em Segurança em ${nome} e MG</h2>
+<h2>Referência em Segurança em ${nome} e ${uf}</h2>
 <div class="gold-line" style="background:linear-gradient(90deg,#FFCC00,#FFE033);"></div>
 <div class="why-grid">
-<div class="why-card"><div class="why-num">+10</div><div class="why-label">Anos de experiência em segurança patrimonial em MG</div></div>
+<div class="why-card"><div class="why-num">+10</div><div class="why-label">Anos de experiência em segurança patrimonial em ${uf}</div></div>
 <div class="why-card"><div class="why-num">100%</div><div class="why-label">Vigilantes certificados e treinados pela Polícia Federal</div></div>
 <div class="why-card"><div class="why-num">24/7</div><div class="why-label">Atendimento e cobertura ininterrupta para sua empresa</div></div>
 <div class="why-card"><div class="why-num">0</div><div class="why-label">Burocracia — contratos flexíveis e proposta rápida</div></div>
@@ -493,28 +658,14 @@ ${faqHtml}
 <section class="sec sec-light">
 <div class="wrap">
 <span class="stag">Abrangência</span>
-<h2>Atendemos ${nome} e Toda a Região de MG</h2>
-<p class="sec-sub">Além de ${nome}, a Santo Onofre atende empresas e condomínios nas principais cidades de Minas Gerais.</p>
+<h2>Atendemos ${nome} e Toda a Região de ${uf}</h2>
+<p class="sec-sub">Além de ${nome}, a Santo Onofre atende empresas e condomínios nas principais cidades de ${ufNome}.</p>
 <div class="gold-line"></div>
 <div style="border-radius:14px;overflow:hidden;border:1px solid var(--bo);margin-bottom:28px;">
-<iframe src="https://www.google.com/maps?q=${encodeURIComponent(nome + ', MG, Brasil')}&output=embed" width="100%" height="320" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ${nome}, MG"></iframe>
+<iframe src="https://www.google.com/maps?q=${encodeURIComponent(nome + ', ' + uf + ', Brasil')}&output=embed" width="100%" height="320" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ${nome}, ${uf}"></iframe>
 </div>
 <div class="cidades-grid">
-<a href="/seguranca-belo-horizonte/" class="cidade-tag">Belo Horizonte</a>
-<a href="/seguranca-uberlandia/" class="cidade-tag">Uberlândia</a>
-<a href="/seguranca-contagem/" class="cidade-tag">Contagem</a>
-<a href="/seguranca-juiz-de-fora/" class="cidade-tag">Juiz de Fora</a>
-<a href="/seguranca-betim/" class="cidade-tag">Betim</a>
-<a href="/seguranca-montes-claros/" class="cidade-tag">Montes Claros</a>
-<a href="/seguranca-uberaba/" class="cidade-tag">Uberaba</a>
-<a href="/seguranca-governador-valadares/" class="cidade-tag">Gov. Valadares</a>
-<a href="/seguranca-ipatinga/" class="cidade-tag">Ipatinga</a>
-<a href="/seguranca-sete-lagoas/" class="cidade-tag">Sete Lagoas</a>
-<a href="/seguranca-divinopolis/" class="cidade-tag">Divinópolis</a>
-<a href="/seguranca-pocos-de-caldas/" class="cidade-tag">Poços de Caldas</a>
-<a href="/seguranca-varginha/" class="cidade-tag">Varginha</a>
-<a href="/seguranca-itabira/" class="cidade-tag">Itabira</a>
-<a href="/seguranca-pouso-alegre/" class="cidade-tag">Pouso Alegre</a>
+${cidadesDestaque.map(x => `<a href="/seguranca-${x.slug}/" class="cidade-tag">${x.nome}</a>`).join('\n')}
 </div>
 </div>
 </section>
@@ -522,7 +673,7 @@ ${faqHtml}
 <section class="cta-sec">
 <div class="wrap">
 <h2>Precisa de Segurança em ${nome}?</h2>
-<p>Entre em contato agora e receba uma proposta personalizada para sua empresa ou condomínio em ${nome}, MG.</p>
+<p>Entre em contato agora e receba uma proposta personalizada para sua empresa ou condomínio em ${nome}, ${uf}.</p>
 <div class="cta-btns">
 <a href="/contato.html" class="btn-gold">Solicitar proposta gratuita <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0B1829" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 <a href="https://wa.me/5531987299396" target="_blank" class="btn-outline">Falar no WhatsApp</a>
@@ -533,10 +684,10 @@ ${faqHtml}
 <footer>
 <div class="wrap">
 <div class="footer-grid">
-<div><span class="ft-name">Santo Onofre Serviços</span><p class="ft-desc" style="margin-top:8px;">Segurança patrimonial em ${nome} e em toda Minas Gerais.</p></div>
+<div><span class="ft-name">Santo Onofre Serviços</span><p class="ft-desc" style="margin-top:8px;">Segurança patrimonial em ${nome} e em toda ${ufNome}.</p></div>
 <div><div class="ft-title">Serviços</div><a href="/servicos.html" class="ft-link">Vigilância Patrimonial</a><a href="/servicos.html" class="ft-link">Controle de Acesso</a><a href="/servicos.html" class="ft-link">Monitoramento</a><a href="/servicos.html" class="ft-link">Seg. em Eventos</a></div>
-<div><div class="ft-title">Cidades</div><a href="/seguranca-belo-horizonte/" class="ft-link">Belo Horizonte</a><a href="/seguranca-contagem/" class="ft-link">Contagem</a><a href="/seguranca-betim/" class="ft-link">Betim</a><a href="/seguranca-uberlandia/" class="ft-link">Uberlândia</a></div>
-<div><div class="ft-title">Fale Conosco</div><a href="https://wa.me/5531987299396" class="ft-link" target="_blank">(31) 98729-9396</a><span class="ft-link" style="cursor:default">Minas Gerais</span></div>
+<div><div class="ft-title">Cidades</div>${cidadesDestaque.slice(0,4).map(x=>`<a href="/seguranca-${x.slug}/" class="ft-link">${x.nome}</a>`).join('')}</div>
+<div><div class="ft-title">Fale Conosco</div><a href="https://wa.me/5531987299396" class="ft-link" target="_blank">(31) 98729-9396</a><span class="ft-link" style="cursor:default">${ufNome}</span></div>
 </div>
 <div class="ft-bottom"><span class="ft-copy">© 2026 Santo Onofre Serviços · Todos os direitos reservados</span></div>
 </div>
